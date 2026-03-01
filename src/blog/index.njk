@@ -1,0 +1,107 @@
+---
+layout: base.njk
+title: Blog
+metaTitle: IT & Cybersecurity Blog
+metaDescription: Expert insights on cybersecurity, IT support, and technology solutions for law firms and accounting practices in Vancouver and the Lower Mainland.
+permalink: /blog/
+---
+<!-- Hero Section -->
+<section class="blog-hero">
+  <div class="container">
+    <span class="section-label">Our Blog</span>
+    <h1>IT & Cybersecurity Insights</h1>
+    <p class="section-subtitle">Expert advice on protecting your business, optimizing your technology, and staying ahead of cyber threats. Written for law firms, accountants, and professional service businesses.</p>
+  </div>
+</section>
+
+<!-- Featured Posts -->
+{% set featured = collections.featuredPosts | limit(3) %}
+{% if featured.length > 0 %}
+<section class="section section-light">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom: 2rem;">Featured Articles</h2>
+    <div class="blog-grid">
+      {% for post in featured %}
+      <article class="blog-card blog-card-featured">
+        {% if post.data.featuredImage %}
+        <a href="{{ post.url }}" class="blog-card-image">
+          <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}">
+        </a>
+        {% endif %}
+        <div class="blog-card-content">
+          {% if post.data.tags %}
+          <div class="blog-card-tags">
+            {% for tag in post.data.tags %}
+            {% if tag != "post" %}
+            <span class="blog-tag">{{ tag }}</span>
+            {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p>{{ post.data.excerpt }}</p>
+          <div class="blog-card-meta">
+            <span>{{ post.data.date | dateFormat }}</span>
+            {% if post.data.readTime %}
+            <span>{{ post.data.readTime }} min read</span>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- All Posts -->
+<section class="section section-gray">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom: 2rem;">All Articles</h2>
+    <div class="blog-grid">
+      {% for post in collections.blog %}
+      <article class="blog-card">
+        {% if post.data.featuredImage %}
+        <a href="{{ post.url }}" class="blog-card-image">
+          <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}">
+        </a>
+        {% endif %}
+        <div class="blog-card-content">
+          {% if post.data.tags %}
+          <div class="blog-card-tags">
+            {% for tag in post.data.tags %}
+            {% if tag != "post" %}
+            <span class="blog-tag">{{ tag }}</span>
+            {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p>{{ post.data.excerpt }}</p>
+          <div class="blog-card-meta">
+            <span>{{ post.data.date | dateFormat }}</span>
+            {% if post.data.readTime %}
+            <span>{{ post.data.readTime }} min read</span>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter CTA -->
+<section class="section section-dark">
+  <div class="container text-center">
+    <h2 class="section-title">Never Miss an Update</h2>
+    <p class="section-subtitle" style="margin-bottom: 2rem;">Subscribe to our newsletter for the latest cybersecurity tips and IT insights delivered straight to your inbox.</p>
+    <div style="max-width: 500px; margin: 0 auto;">
+      <iframe
+        src="{{ site.ghlNewsletterForm }}"
+        style="width: 100%; height: 120px; border: none;"
+        title="Newsletter Form"
+      ></iframe>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{
+  "name": "ayvant-website",
+  "version": "1.0.0",
+  "description": "Ayvant IT & Cybersecurity website",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.0.0"
+  }
+}
