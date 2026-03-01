@@ -151,27 +151,27 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 70px;
 }
 
 .navbar-logo img {
-  height: 50px;
+  height: 45px;
   width: auto;
 }
 
 .navbar-menu {
   display: none;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .navbar-menu { display: flex; }
 }
 
 .navbar-menu a {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--zinc-700);
   border-radius: 2px;
@@ -188,26 +188,26 @@ ul {
 .navbar-actions {
   display: none;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .navbar-actions { display: flex; }
 }
 
 .navbar-actions .client-portal {
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
-  font-size: 0.813rem;
+  gap: 0.25rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--zinc-700);
   white-space: nowrap;
 }
 
 .navbar-actions .client-portal svg {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   flex-shrink: 0;
 }
 
@@ -216,14 +216,14 @@ ul {
 }
 
 .navbar-actions .btn {
-  padding: 0.5rem 0.875rem;
-  font-size: 0.813rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
   white-space: nowrap;
 }
 
 .navbar-actions .btn svg {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   flex-shrink: 0;
 }
 
