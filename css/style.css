@@ -166,7 +166,7 @@ ul {
 }
 
 @media (min-width: 1200px) {
-  .navbar-menu { display: flex-inline; }
+  .navbar-menu { display: flex; }
 }
 
 .navbar-menu a {
