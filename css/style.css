@@ -207,6 +207,18 @@ ul {
   color: var(--ayvant-red);
 }
 
+.navbar-actions .btn {
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.navbar-actions .btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
 /* Mobile Menu */
 .mobile-menu-btn {
   display: flex;
