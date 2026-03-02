@@ -86,12 +86,8 @@
         <div class="exit-popup-callout">
           <strong style="color: var(--ayvant-red);">Perfect for Law Firms & Accountants:</strong> Your clients trust you with their most sensitive information. Find out if that trust has been compromised.
         </div>
-        <iframe
-          src="{{ site.ghlDarkWebForm }}"
-          style="width: 100%; height: 449px; border: none;"
-          title="DarkWeb Final Form"
-          loading="lazy"
-        ></iframe>
+        <!-- Iframe loads only when popup is shown (see main.js) -->
+        <div id="exit-popup-form-container" data-form-url="{{ site.ghlDarkWebForm }}" style="width: 100%; height: 449px;"></div>
       </div>
     </div>
   </div>
@@ -108,8 +104,17 @@
     gtag('config', 'G-2B3N9Z8CCH');
   </script>
 
-  <!-- GHL Chat Widget - Deferred to not block rendering -->
-  <script defer src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="{{ site.ghlChatWidgetId }}"></script>
+<!-- GHL Chat Widget - Desktop only (disabled on mobile for performance) -->
+  <script>
+    if (window.innerWidth >= 768) {
+      var chatScript = document.createElement('script');
+      chatScript.src = 'https://beta.leadconnectorhq.com/loader.js';
+      chatScript.defer = true;
+      chatScript.setAttribute('data-resources-url', 'https://beta.leadconnectorhq.com/chat-widget/loader.js');
+      chatScript.setAttribute('data-widget-id', '{{ site.ghlChatWidgetId }}');
+      document.body.appendChild(chatScript);
+    }
+  </script>
   
   <!-- GHL Form Embed Script - Deferred -->
   <script defer src="https://link.msgsndr.com/js/form_embed.js"></script>
