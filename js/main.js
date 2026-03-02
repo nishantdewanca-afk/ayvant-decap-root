@@ -39,6 +39,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  
+2. src/_includes/footer.njk
+Find this (around line 10-14):
+
+          <iframe
+            src="{{ site.ghlNewsletterForm }}"
+            style="width: 100%; height: 120px; border: none;"
+            title="Newsletter Form"
+          ></iframe>
+Replace with:
+
+          <iframe
+            src="{{ site.ghlNewsletterForm }}"
+            style="width: 100%; height: 120px; border: none;"
+            title="Newsletter Form"
+            loading="lazy"
+          ></iframe>
+3. js/main.js
+Find this (around line 42-74):
+
   // Exit Intent Popup
   const exitPopup = document.getElementById('exit-popup');
   const exitPopupClose = document.getElementById('exit-popup-close');
@@ -71,6 +91,58 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }
+  }
+Replace with:
+
+  // Exit Intent Popup
+  const exitPopup = document.getElementById('exit-popup');
+  const exitPopupClose = document.getElementById('exit-popup-close');
+  const exitPopupFormContainer = document.getElementById('exit-popup-form-container');
+  let exitPopupShown = false;
+  let exitPopupFormLoaded = false;
+  
+  // Function to load the exit popup form iframe (only when popup is shown)
+  function loadExitPopupForm() {
+    if (exitPopupFormContainer && !exitPopupFormLoaded) {
+      const formUrl = exitPopupFormContainer.getAttribute('data-form-url');
+      if (formUrl) {
+        const iframe = document.createElement('iframe');
+        iframe.src = formUrl;
+        iframe.style.cssText = 'width: 100%; height: 449px; border: none;';
+        iframe.title = 'DarkWeb Final Form';
+        exitPopupFormContainer.appendChild(iframe);
+        exitPopupFormLoaded = true;
+      }
+    }
+  }
+  
+  if (exitPopup) {
+    const popupShown = sessionStorage.getItem('ayvant-exit-popup-shown');
+    
+    if (!popupShown) {
+      document.addEventListener('mouseleave', function(e) {
+        if (e.clientY <= 0 && !exitPopupShown) {
+          exitPopup.classList.add('active');
+          exitPopupShown = true;
+          sessionStorage.setItem('ayvant-exit-popup-shown', 'true');
+          // Load form iframe only when popup is shown
+          loadExitPopupForm();
+        }
+      });
+    }
+    
+    if (exitPopupClose) {
+      exitPopupClose.addEventListener('click', function() {
+        exitPopup.classList.remove('active');
+      });
+    }
+    
+    // Close on overlay click
+    exitPopup.addEventListener('click', function(e) {
+      if (e.target === exitPopup) {
+        exitPopup.classList.remove('active');
+      }
+    });
   }
 
   // Smooth scroll for anchor links
