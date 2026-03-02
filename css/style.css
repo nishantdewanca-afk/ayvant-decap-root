@@ -1,5 +1,6 @@
 /* Ayvant IT & Cybersecurity - Main Stylesheet */
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;700;900&family=Manrope:wght@300;400;500;600;700&display=swap');
+/* Google Fonts - Using display=swap for FOUT instead of FOIT */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap');
 
 /* CSS Variables */
 :root {
@@ -165,7 +166,7 @@ ul {
   gap: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .navbar-menu { display: flex; }
 }
 
@@ -191,7 +192,7 @@ ul {
   gap: 0.5rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .navbar-actions { display: flex; }
 }
 

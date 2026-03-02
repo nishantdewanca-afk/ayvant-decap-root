@@ -43,7 +43,7 @@ layout: base.njk
   {% if featuredImage %}
   <div class="blog-post-image">
     <div class="container" style="max-width: 56rem;">
-      <img src="{{ featuredImage }}" alt="{{ title }}">
+      <img src="{{ featuredImage }}" alt="{{ title }}" loading="lazy" decoding="async">
     </div>
   </div>
   {% endif %}

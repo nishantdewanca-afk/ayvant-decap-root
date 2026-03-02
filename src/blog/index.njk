@@ -25,7 +25,7 @@ permalink: /blog/
       <article class="blog-card blog-card-featured">
         {% if post.data.featuredImage %}
         <a href="{{ post.url }}" class="blog-card-image">
-          <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}">
+          <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}" loading="lazy" decoding="async">
         </a>
         {% endif %}
         <div class="blog-card-content">
@@ -63,7 +63,7 @@ permalink: /blog/
       <article class="blog-card">
         {% if post.data.featuredImage %}
         <a href="{{ post.url }}" class="blog-card-image">
-          <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}">
+          <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}" loading="lazy" decoding="async">
         </a>
         {% endif %}
         <div class="blog-card-content">
@@ -101,6 +101,7 @@ permalink: /blog/
         src="{{ site.ghlNewsletterForm }}"
         style="width: 100%; height: 120px; border: none;"
         title="Newsletter Form"
+        loading="lazy"
       ></iframe>
     </div>
   </div>
