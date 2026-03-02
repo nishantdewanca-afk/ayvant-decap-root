@@ -6,28 +6,22 @@
   <title>{{ metaTitle or title }} | {{ site.name }}</title>
   <meta name="description" content="{{ metaDescription or description or site.description }}">
   
-  <!-- Preconnect to required origins for performance -->
+  <!-- Preconnect to required origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://widget.msgsndr.com">
-  <link rel="preconnect" href="https://forms.msgsndr.com">
-  <link rel="preconnect" href="https://beta.leadconnectorhq.com">
-  <link rel="preconnect" href="https://link.msgsndr.com">
-  <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://images.unsplash.com">
   
-  <!-- DNS Prefetch as fallback -->
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-  <link rel="dns-prefetch" href="https://widget.msgsndr.com">
-  <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com">
+  <!-- Google Fonts - Loaded async to prevent render blocking -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap"></noscript>
   
   <!-- Preload hero image for LCP optimization -->
   {% if page.url == "/" %}
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920&q=80" fetchpriority="high">
   {% endif %}
   
-  <!-- Critical CSS inline for above-the-fold content -->
+  <!-- Main CSS -->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   
