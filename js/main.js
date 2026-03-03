@@ -39,61 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  
-2. src/_includes/footer.njk
-Find this (around line 10-14):
-
-          <iframe
-            src="{{ site.ghlNewsletterForm }}"
-            style="width: 100%; height: 120px; border: none;"
-            title="Newsletter Form"
-          ></iframe>
-Replace with:
-
-          <iframe
-            src="{{ site.ghlNewsletterForm }}"
-            style="width: 100%; height: 120px; border: none;"
-            title="Newsletter Form"
-            loading="lazy"
-          ></iframe>
-3. js/main.js
-Find this (around line 42-74):
-
-  // Exit Intent Popup
-  const exitPopup = document.getElementById('exit-popup');
-  const exitPopupClose = document.getElementById('exit-popup-close');
-  const exitPopupOverlay = document.getElementById('exit-popup-overlay');
-  let exitPopupShown = false;
-  
-  if (exitPopup) {
-    const popupShown = sessionStorage.getItem('ayvant-exit-popup-shown');
-    
-    if (!popupShown) {
-      document.addEventListener('mouseleave', function(e) {
-        if (e.clientY <= 0 && !exitPopupShown) {
-          exitPopup.classList.add('active');
-          exitPopupShown = true;
-          sessionStorage.setItem('ayvant-exit-popup-shown', 'true');
-        }
-      });
-    }
-    
-    if (exitPopupClose) {
-      exitPopupClose.addEventListener('click', function() {
-        exitPopup.classList.remove('active');
-      });
-    }
-    
-    if (exitPopupOverlay) {
-      exitPopupOverlay.addEventListener('click', function(e) {
-        if (e.target === exitPopupOverlay) {
-          exitPopup.classList.remove('active');
-        }
-      });
-    }
-  }
-Replace with:
-
   // Exit Intent Popup
   const exitPopup = document.getElementById('exit-popup');
   const exitPopupClose = document.getElementById('exit-popup-close');
@@ -108,7 +53,8 @@ Replace with:
       if (formUrl) {
         const iframe = document.createElement('iframe');
         iframe.src = formUrl;
-        iframe.style.cssText = 'width: 100%; height: 449px; border: none;';
+        iframe.style.cssText = 'width: 100%; height: 600px; border: none; overflow: hidden;';
+        iframe.setAttribute('scrolling', 'no');
         iframe.title = 'DarkWeb Final Form';
         exitPopupFormContainer.appendChild(iframe);
         exitPopupFormLoaded = true;
