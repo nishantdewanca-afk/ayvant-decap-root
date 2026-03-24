@@ -1,5 +1,6 @@
 /* Ayvant IT & Cybersecurity - Main Stylesheet */
-/* Google Fonts loaded async in base.njk for performance */
+/* Google Fonts - Using display=swap for FOUT instead of FOIT */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap');
 
 /* CSS Variables */
 :root {
@@ -291,7 +292,6 @@ ul {
   background-position: center;
   opacity: 0.1;
 }
-
 
 .hero-overlay {
   position: absolute;

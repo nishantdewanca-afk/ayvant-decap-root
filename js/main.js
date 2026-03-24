@@ -53,8 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (formUrl) {
         const iframe = document.createElement('iframe');
         iframe.src = formUrl;
-        iframe.style.cssText = 'width: 100%; height: 600px; border: none; overflow: hidden;';
-        iframe.setAttribute('scrolling', 'no');
+        iframe.style.cssText = 'width: 100%; height: 449px; border: none;';
         iframe.title = 'DarkWeb Final Form';
         exitPopupFormContainer.appendChild(iframe);
         exitPopupFormLoaded = true;

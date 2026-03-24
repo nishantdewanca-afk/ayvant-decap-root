@@ -6,18 +6,28 @@
   <title>{{ metaTitle or title }} | {{ site.name }}</title>
   <meta name="description" content="{{ metaDescription or description or site.description }}">
   
-  <!-- Preconnect to required origins -->
+  <!-- Preconnect to required origins for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://widget.msgsndr.com">
+  <link rel="preconnect" href="https://forms.msgsndr.com">
+  <link rel="preconnect" href="https://beta.leadconnectorhq.com">
+  <link rel="preconnect" href="https://link.msgsndr.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://images.unsplash.com">
   
-  <!-- Google Fonts - Loaded async to prevent render blocking -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap"></noscript>
+  <!-- DNS Prefetch as fallback -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://widget.msgsndr.com">
+  <link rel="dns-prefetch" href="https://beta.leadconnectorhq.com">
   
+  <!-- Preload hero image for LCP optimization -->
+  {% if page.url == "/" %}
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1920&q=80" fetchpriority="high">
+  {% endif %}
   
-  <!-- Main CSS -->
+  <!-- Critical CSS inline for above-the-fold content -->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   
@@ -34,6 +44,118 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ metaTitle or title }} | {{ site.name }}">
   <meta name="twitter:description" content="{{ metaDescription or description or site.description }}">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "{{ site.url }}/#organization",
+    "name": "{{ site.name }}",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}",
+    "telephone": "+1-604-239-2090",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.address.street }}",
+      "addressLocality": "{{ site.address.city }}",
+      "addressRegion": "{{ site.address.province }}",
+      "postalCode": "{{ site.address.postal }}",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.0985,
+      "longitude": -122.6585
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "priceRange": "$$",
+    "image": "https://customer-assets.emergentagent.com/job_bc-it-solutions/artifacts/gxout8lv_ayvant%20%281%29.png",
+    "sameAs": [
+      "{{ site.social.linkedin }}",
+      "{{ site.social.facebook }}",
+      "{{ site.social.twitter }}"
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "Vancouver", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
+      {"@type": "City", "name": "Surrey", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
+      {"@type": "City", "name": "Langley", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
+      {"@type": "City", "name": "Burnaby", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
+      {"@type": "City", "name": "Richmond", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
+      {"@type": "City", "name": "Coquitlam", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
+      {"@type": "City", "name": "Port Moody", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
+      {"@type": "City", "name": "Delta", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
+      {"@type": "City", "name": "Abbotsford", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
+      {"@type": "City", "name": "Chilliwack", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "IT & Cybersecurity Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Managed IT Support"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cybersecurity Services"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cloud Services"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Network Management"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "IT Consulting"}}
+      ]
+    }
+  }
+  </script>
+  
+  {% if "/locations/" in page.url %}
+  <!-- Location-specific Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "IT Support & Cybersecurity",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "{{ site.name }}",
+      "telephone": "+1-604-239-2090",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.address.street }}",
+        "addressLocality": "{{ site.address.city }}",
+        "addressRegion": "{{ site.address.province }}",
+        "postalCode": "{{ site.address.postal }}",
+        "addressCountry": "CA"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "{{ title | replace('IT Support in ', '') | replace('IT Support for Law Firms in ', '') | replace('IT Support for Accountants in ', '') | replace('IT Support for Healthcare in ', '') | replace(', BC', '') }}"
+    },
+    "description": "{{ metaDescription or description }}",
+    "url": "{{ site.url }}{{ page.url }}"
+  }
+  </script>
+  {% endif %}
+  
+  {% if page.url == "/" %}
+  <!-- Website Schema for Homepage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "{{ site.url }}/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  {% endif %}
 </head>
 <body>
   {% include "header.njk" %}
@@ -77,7 +199,7 @@
           <strong style="color: var(--ayvant-red);">Perfect for Law Firms & Accountants:</strong> Your clients trust you with their most sensitive information. Find out if that trust has been compromised.
         </div>
         <!-- Iframe loads only when popup is shown (see main.js) -->
-        <div id="exit-popup-form-container" data-form-url="{{ site.ghlDarkWebForm }}" style="width: 100%; height: 600px;"></div>
+        <div id="exit-popup-form-container" data-form-url="{{ site.ghlDarkWebForm }}" style="width: 100%; height: 449px;"></div>
       </div>
     </div>
   </div>
@@ -94,7 +216,7 @@
     gtag('config', 'G-2B3N9Z8CCH');
   </script>
 
-<!-- GHL Chat Widget - Desktop only (disabled on mobile for performance) -->
+  <!-- GHL Chat Widget - Desktop only (disabled on mobile for performance) -->
   <script>
     if (window.innerWidth >= 768) {
       var chatScript = document.createElement('script');
