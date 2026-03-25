@@ -1,0 +1,292 @@
+---
+layout: base.njk
+title: "Free Email Security Scan"
+metaTitle: "Free Email Security Scan | Check Your DMARC, DKIM & SPF"
+metaDescription: "Is your business email protected? Get a free instant scan to check your DMARC, DKIM, and SPF records. Find vulnerabilities before hackers do."
+---
+<!-- Hero Section with Scanner -->
+<section class="hero" style="padding: 4rem 0;">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="grid grid-2" style="align-items: center; gap: 3rem;">
+      <div>
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Free Security Tool
+        </div>
+        <h1>Is Your Business Email <span>Actually Secure?</span></h1>
+        <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">Cybercriminals can spoof your email domain to send phishing attacks to your clients, partners, and employees. Our free scanner checks your DMARC, DKIM, and SPF records in seconds.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ayvant-red)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Instant Results</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ayvant-red)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>No Sign-up Required</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ayvant-red)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>100% Free</span>
+          </div>
+        </div>
+      </div>
+      <div style="background: white; border-radius: 4px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
+        <div style="background: var(--zinc-900); padding: 0.75rem 1rem; border-bottom: 1px solid var(--zinc-700);">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #eab308;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
+            <span style="margin-left: 0.5rem; font-size: 0.875rem; color: var(--zinc-400);">Email Security Scanner</span>
+          </div>
+        </div>
+        <iframe src="https://radar.ayvant.com/scan" width="100%" height="500" frameborder="0" title="Email Security Scanner" style="display: block;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What We Check -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Scan</span>
+      <h2 class="section-title">The Three Pillars of Email Security</h2>
+      <p class="section-subtitle">These DNS records work together to protect your domain from email spoofing and phishing attacks.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-content">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(227,24,55,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ayvant-red)" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">SPF</h3>
+          <p style="font-size: 0.875rem; color: var(--ayvant-red); margin-bottom: 1rem;">Sender Policy Framework</p>
+          <p class="text-zinc-600">SPF tells receiving mail servers which IP addresses and servers are authorized to send email on behalf of your domain. Without it, anyone can send emails pretending to be you.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(227,24,55,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ayvant-red)" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">DKIM</h3>
+          <p style="font-size: 0.875rem; color: var(--ayvant-red); margin-bottom: 1rem;">DomainKeys Identified Mail</p>
+          <p class="text-zinc-600">DKIM adds a digital signature to your outgoing emails, proving they haven't been tampered with in transit. It's like a wax seal on a letter – proof of authenticity.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(227,24,55,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ayvant-red)" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">DMARC</h3>
+          <p style="font-size: 0.875rem; color: var(--ayvant-red); margin-bottom: 1rem;">Domain-based Message Authentication</p>
+          <p class="text-zinc-600">DMARC ties SPF and DKIM together and tells receiving servers what to do with emails that fail authentication – reject them, quarantine them, or let them through.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why It Matters -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+      <div>
+        <span class="section-label">The Reality</span>
+        <h2 class="section-title" style="text-align: left;">What Happens Without Proper Email Security?</h2>
+        <p style="color: var(--zinc-300); font-size: 1.125rem; margin-bottom: 2rem;">When your email authentication isn't configured correctly, you're leaving the door wide open for attackers. Here's what's at stake:</p>
+        
+        <div style="space-y: 1.5rem;">
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 8px; background: rgba(239,68,68,0.2); display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <div>
+              <h4 style="color: white; margin-bottom: 0.25rem;">Email Spoofing Attacks</h4>
+              <p class="text-zinc-400">Criminals can send emails that appear to come from your domain, tricking your clients into wiring money or sharing sensitive information.</p>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 8px; background: rgba(239,68,68,0.2); display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+            </div>
+            <div>
+              <h4 style="color: white; margin-bottom: 0.25rem;">Emails Landing in Spam</h4>
+              <p class="text-zinc-400">Without proper authentication, your legitimate emails may be flagged as spam by Gmail, Outlook, and other providers – meaning your messages never reach clients.</p>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 8px; background: rgba(239,68,68,0.2); display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="18" y1="8" x2="23" y2="13"></line><line x1="23" y1="8" x2="18" y2="13"></line></svg>
+            </div>
+            <div>
+              <h4 style="color: white; margin-bottom: 0.25rem;">Reputation Damage</h4>
+              <p class="text-zinc-400">If your domain is used in phishing attacks, your business reputation suffers – even though you weren't the one sending the malicious emails.</p>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: 1rem;">
+            <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 8px; background: rgba(239,68,68,0.2); display: flex; align-items: center; justify-content: center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M7 15h0M2 9.5h20"></path></svg>
+            </div>
+            <div>
+              <h4 style="color: white; margin-bottom: 0.25rem;">Financial Losses</h4>
+              <p class="text-zinc-400">Business Email Compromise (BEC) attacks cost organizations billions annually. Proper email authentication is your first line of defense.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="background: var(--zinc-800); border: 1px solid var(--zinc-700); border-radius: 4px; padding: 2rem;">
+        <h3 style="color: white; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ayvant-red)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          The Numbers Don't Lie
+        </h3>
+        <div style="display: grid; gap: 1.5rem;">
+          <div style="border-bottom: 1px solid var(--zinc-700); padding-bottom: 1.5rem;">
+            <p style="font-size: 2.5rem; font-weight: 700; color: var(--ayvant-red); margin-bottom: 0.25rem;">91%</p>
+            <p class="text-zinc-400">of cyber attacks start with a phishing email</p>
+          </div>
+          <div style="border-bottom: 1px solid var(--zinc-700); padding-bottom: 1.5rem;">
+            <p style="font-size: 2.5rem; font-weight: 700; color: var(--ayvant-red); margin-bottom: 0.25rem;">$4.9B</p>
+            <p class="text-zinc-400">lost to Business Email Compromise in 2023</p>
+          </div>
+          <div style="border-bottom: 1px solid var(--zinc-700); padding-bottom: 1.5rem;">
+            <p style="font-size: 2.5rem; font-weight: 700; color: var(--ayvant-red); margin-bottom: 0.25rem;">3.4B</p>
+            <p class="text-zinc-400">phishing emails sent every single day</p>
+          </div>
+          <div>
+            <p style="font-size: 2.5rem; font-weight: 700; color: var(--ayvant-red); margin-bottom: 0.25rem;">80%</p>
+            <p class="text-zinc-400">of domains lack proper DMARC protection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How Ayvant Helps -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Solution</span>
+      <h2 class="section-title">How Ayvant Protects Your Email</h2>
+      <p class="section-subtitle">We don't just scan – we fix. Our team implements enterprise-grade email security for businesses of all sizes.</p>
+    </div>
+    
+    <div class="grid grid-2" style="gap: 3rem; margin-bottom: 3rem;">
+      <div style="background: white; border: 1px solid var(--zinc-200); border-radius: 4px; padding: 2rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="width: 48px; height: 48px; border-radius: 8px; background: var(--ayvant-red); display: flex; align-items: center; justify-content: center;">
+            <span style="color: white; font-weight: 700; font-size: 1.25rem;">1</span>
+          </div>
+          <h3 style="margin: 0;">Assessment & Audit</h3>
+        </div>
+        <p class="text-zinc-600">We perform a comprehensive audit of your current email configuration, identifying gaps in your SPF, DKIM, and DMARC records. We also review your email sending services to ensure nothing is missed.</p>
+      </div>
+      
+      <div style="background: white; border: 1px solid var(--zinc-200); border-radius: 4px; padding: 2rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="width: 48px; height: 48px; border-radius: 8px; background: var(--ayvant-red); display: flex; align-items: center; justify-content: center;">
+            <span style="color: white; font-weight: 700; font-size: 1.25rem;">2</span>
+          </div>
+          <h3 style="margin: 0;">Proper Configuration</h3>
+        </div>
+        <p class="text-zinc-600">We configure your DNS records correctly – setting up SPF to authorize your legitimate senders, implementing DKIM signing, and creating a DMARC policy that protects without disrupting your email flow.</p>
+      </div>
+      
+      <div style="background: white; border: 1px solid var(--zinc-200); border-radius: 4px; padding: 2rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="width: 48px; height: 48px; border-radius: 8px; background: var(--ayvant-red); display: flex; align-items: center; justify-content: center;">
+            <span style="color: white; font-weight: 700; font-size: 1.25rem;">3</span>
+          </div>
+          <h3 style="margin: 0;">Gradual Enforcement</h3>
+        </div>
+        <p class="text-zinc-600">We don't flip DMARC to "reject" on day one – that could block legitimate emails. Instead, we start with monitoring mode, analyze the reports, and gradually increase enforcement as we verify all legitimate sources.</p>
+      </div>
+      
+      <div style="background: white; border: 1px solid var(--zinc-200); border-radius: 4px; padding: 2rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="width: 48px; height: 48px; border-radius: 8px; background: var(--ayvant-red); display: flex; align-items: center; justify-content: center;">
+            <span style="color: white; font-weight: 700; font-size: 1.25rem;">4</span>
+          </div>
+          <h3 style="margin: 0;">Ongoing Monitoring</h3>
+        </div>
+        <p class="text-zinc-600">Email security isn't set-and-forget. We continuously monitor your DMARC reports, alert you to spoofing attempts, and adjust your configuration as your business adds new email services.</p>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="/pages/contact/" class="btn btn-primary btn-lg">Get Expert Help with Email Security</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Common Questions About Email Security</h2>
+    </div>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="background: white; border: 1px solid var(--zinc-200); border-radius: 4px; margin-bottom: 1rem; padding: 1.5rem;">
+        <h4 style="margin-bottom: 0.75rem;">Do I really need all three (SPF, DKIM, DMARC)?</h4>
+        <p class="text-zinc-600" style="margin: 0;">Yes. Think of them as a team: SPF verifies the sender, DKIM verifies the message integrity, and DMARC tells receivers what to do when checks fail. Without all three, you have gaps in your protection.</p>
+      </div>
+      
+      <div style="background: white; border: 1px solid var(--zinc-200); border-radius: 4px; margin-bottom: 1rem; padding: 1.5rem;">
+        <h4 style="margin-bottom: 0.75rem;">Will setting up DMARC break my email?</h4>
+        <p class="text-zinc-600" style="margin: 0;">Not if done correctly. The key is starting with a "none" policy (monitoring only), then gradually moving to "quarantine" and finally "reject" as you verify all legitimate email sources. We handle this carefully to avoid disruption.</p>
+      </div>
+      
+      <div style="background: white; border: 1px solid var(--zinc-200); border-radius: 4px; margin-bottom: 1rem; padding: 1.5rem;">
+        <h4 style="margin-bottom: 0.75rem;">I use Microsoft 365/Google Workspace. Aren't they secure?</h4>
+        <p class="text-zinc-600" style="margin: 0;">These platforms provide excellent infrastructure, but they don't automatically configure your domain's email authentication records. You still need to set up SPF, DKIM, and DMARC in your DNS – and configure them correctly for your specific setup.</p>
+      </div>
+      
+      <div style="background: white; border: 1px solid var(--zinc-200); border-radius: 4px; margin-bottom: 1rem; padding: 1.5rem;">
+        <h4 style="margin-bottom: 0.75rem;">How long does it take to implement?</h4>
+        <p class="text-zinc-600" style="margin: 0;">Initial setup can be done in a few hours. However, reaching full DMARC enforcement (reject policy) typically takes 4-8 weeks of monitoring to ensure all legitimate email sources are properly authenticated.</p>
+      </div>
+      
+      <div style="background: white; border: 1px solid var(--zinc-200); border-radius: 4px; padding: 1.5rem;">
+        <h4 style="margin-bottom: 0.75rem;">What if our scan shows problems?</h4>
+        <p class="text-zinc-600" style="margin: 0;">That's exactly why we offer this free tool – to help you identify issues before they become problems. If your scan reveals vulnerabilities, we're here to help fix them. Contact us for a free consultation to discuss your results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section section-red">
+  <div class="container text-center">
+    <h2 class="section-title">Don't Wait for an Attack to Take Email Security Seriously</h2>
+    <p class="section-subtitle" style="margin-bottom: 2rem;">Run your free scan above, or talk to our team about implementing enterprise-grade email protection for your business.</p>
+    <div class="hero-buttons" style="justify-content: center;">
+      <a href="/pages/contact/" class="btn btn-white btn-lg">Talk to an Expert</a>
+      <a href="tel:+16042392090" class="btn btn-outline btn-lg" style="border-color: white; color: white;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        (604) 239-2090
+      </a>
+    </div>
+  </div>
+</section>
