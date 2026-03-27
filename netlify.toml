@@ -32,6 +32,11 @@
   status = 301
 
 [[redirects]]
+  from = "/locations/it-support-surrey/"
+  to = "/managed-it-services-surrey/"
+  status = 301
+
+[[redirects]]
   from = "/locations/langley/"
   to = "/locations/it-support-langley/"
   status = 301
