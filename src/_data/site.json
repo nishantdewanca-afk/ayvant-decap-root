@@ -3,6 +3,7 @@
   "url": "https://ayvant.ca",
   "description": "Ayvant IT & Cybersecurity provides managed IT support and cybersecurity services for law firms, accountants, and businesses in Vancouver and the Lower Mainland, BC.",
   "phone": "(604) 239-2090",
+  "phoneSurrey": "(778) 909-5896",
   "email": "hello@ayvant.ca",
   "address": {
     "street": "20627 Fraser Hwy",
@@ -10,10 +11,16 @@
     "province": "BC",
     "postal": "V3A 4G4"
   },
+  "addressSurrey": {
+    "street": "2677 192 St Suite 102",
+    "city": "Surrey",
+    "province": "BC",
+    "postal": "V3S 3X1"
+  },
   "social": {
-    "linkedin": "#",
-    "facebook": "#",
-    "twitter": "#"
+    "linkedin": "https://www.linkedin.com/company/ayvant-it-cybersecurity-inc",
+    "facebook": "https://facebook.com/ayvant.ca",
+    "x": "https://x.com/ayvant_ca"
   },
   "clientPortal": "https://ayvant-ca.app.clientclub.net/",
   "ghlChatWidgetId": "69a2a83d95702f720374ab00",
