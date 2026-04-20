@@ -11,6 +11,7 @@ excerpt: Do you need help with IT for your business in Vancouver? You're not the
   topics. You'll find clear, simple answers here, whether you're trying to
   decide between managed services and break-fix support or wondering if your
   team is too small to need IT help.
+featuredImage: /images/uploads/it-support-faq.jpg
 tags:
   - FAQs
 featured: false
