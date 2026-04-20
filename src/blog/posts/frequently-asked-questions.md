@@ -156,4 +156,4 @@ We'd be happy to talk about your situation in more detail. Schedule a free 30-mi
 
 →Email: hello@ayvant.ca
 
-→Make a reservation online: <https://api.leadconnectorhq.com/widget/bookings/30-minute-free-consultation-ayvant>
+→Make a reservation online: [Click here to reserve](https://api.leadconnectorhq.com/widget/bookings/30-minute-free-consultation-ayvant)
