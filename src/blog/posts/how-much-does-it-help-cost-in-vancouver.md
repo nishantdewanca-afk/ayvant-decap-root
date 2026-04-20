@@ -47,8 +47,6 @@ The exact scope depends on the plan, but here are some things that most business
 
 •      Regular reports on the health of the system
 
- 
-
 ### Help desk support
 
 •      Your team can get unlimited remote help during business hours.
@@ -56,8 +54,6 @@ The exact scope depends on the plan, but here are some things that most business
 •      Phone, email, and portal ticketing
 
 •      Help on-site for problems that can't be fixed from a distance
-
- 
 
 ### Cybersecurity (Plans for Professionals and Advanced Users)
 
@@ -69,8 +65,6 @@ The exact scope depends on the plan, but here are some things that most business
 
 •      Checking the dark web for stolen credentials
 
- 
-
 ### Backup and disaster recovery (for the Professional and Advanced plans)
 
 •      Daily backups that are done automatically and stored off-site or in the cloud as a backup.
@@ -79,8 +73,6 @@ The exact scope depends on the plan, but here are some things that most business
 
 •      Recovery time goals set out in your service agreement
 
- 
-
 ### Support for compliance (Advanced plan)
 
 •      PIPEDA and BC PIPAcompliance advice
@@ -88,8 +80,6 @@ The exact scope depends on the plan, but here are some things that most business
 •      Paperwork for audits and insurance needs
 
 •      Virtual CISO (vCISO) advice for businesses that have to follow rules
-
- 
 
 ## What things affect the price?
 
@@ -127,8 +117,6 @@ The reality is different. Think about how much a single serious IT problem costs
 
 •      If a server at an accounting firm goes down during tax season, it can cost them days of work.
 
- 
-
 ManagedIT support stops most of these things from happening in the first place.For most businesses with five or more users, managed services are always better than break-fix.
 
 *A company with 10 employees that spends $1,000 a month on managed IT (or $12,000 a year) is well protected against problems that could cost them much more than that in a single event.*
@@ -165,13 +153,7 @@ We don't believe in prices that work for everyone because every business is diff
 
 •      You only need on-site support or remote support.
 
- 
-
 After a short conversation, most quotes can be ready in less than 30 minutes. There's no pressure to buy anything, and you don't have to. You just get a clear picture of what support would look like for your business.
-
- 
-
- 
 
 Want a clear answer about prices?
 
