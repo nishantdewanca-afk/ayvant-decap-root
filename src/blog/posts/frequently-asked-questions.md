@@ -2,15 +2,8 @@
 title: Frequently Asked Questions
 date: 2026-04-20T12:05:00.000-07:00
 author: Ayvant Team
-excerpt: Do you need help with IT for your business in Vancouver? You're not the
-  only one. We've put together answers to the most common questions we get from
-  small businesses, law firms, accounting firms, and healthcare clinics in
-  Greater Vancouver, Surrey, Burnaby, Richmond, and the Lower Mainland. Managed
-  IT pricing, response times, cybersecurity, cloud migration, compliance with BC
-  privacy laws, and IT needs that are specific to your industry are some of the
-  topics. You'll find clear, simple answers here, whether you're trying to
-  decide between managed services and break-fix support or wondering if your
-  team is too small to need IT help.
+excerpt: Have IT support questions? We've answered the most common ones from
+  Vancouver businesses — pricing, security, compliance, and more.
 featuredImage: /images/uploads/it-support-faq.jpg
 tags:
   - FAQs
