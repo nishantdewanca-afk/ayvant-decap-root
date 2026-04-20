@@ -163,4 +163,4 @@ Schedule a free 30-minute meeting with our team. We'll ask you some questions ab
 
 →Email: [hello@ayvant.ca](mailto:hello@ayvant.ca)
 
-→Make a reservation online: [https://api.leadconnectorhq.com/widget/bookings/30-minute-free-consultation-ayvant ](https://api.leadconnectorhq.com/widget/bookings/30-minute-free-consultation-ayvant)
+→Make a reservation online: [Click here to reserve.](https://api.leadconnectorhq.com/widget/bookings/30-minute-free-consultation-ayvant)
