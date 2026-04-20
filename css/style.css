@@ -1,6 +1,5 @@
 /* Ayvant IT & Cybersecurity - Main Stylesheet */
-/* Google Fonts - Using display=swap for FOUT instead of FOIT */
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap');
+/* Google Fonts loaded via preload in HTML for better performance */
 
 /* CSS Variables */
 :root {
@@ -111,6 +110,19 @@ ul {
 .btn-outline:hover {
   background-color: white;
   color: var(--ayvant-black);
+}
+
+/* Contrast fix: btn-outline on light backgrounds should use dark text */
+.section-light .btn-outline,
+.section-gray .btn-outline {
+  border-color: var(--zinc-900);
+  color: var(--zinc-900);
+}
+
+.section-light .btn-outline:hover,
+.section-gray .btn-outline:hover {
+  background-color: var(--zinc-900);
+  color: white;
 }
 
 .btn-outline-dark {
@@ -272,7 +284,7 @@ ul {
 /* Hero Section */
 .hero {
   position: relative;
-  background-color: var(--zinc-900);
+  background: linear-gradient(135deg, var(--zinc-900) 0%, #1a1a2e 50%, var(--zinc-900) 100%);
   padding: 6rem 0;
   overflow: hidden;
 }
@@ -296,7 +308,8 @@ ul {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, var(--zinc-900), rgba(24,24,27,0.95), rgba(24,24,27,0.8));
+  background: radial-gradient(ellipse at 30% 50%, rgba(227, 24, 55, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 80%, rgba(227, 24, 55, 0.05) 0%, transparent 40%);
 }
 
 .hero-content {
@@ -340,7 +353,7 @@ ul {
 
 .hero p {
   font-size: 1.25rem;
-  color: var(--zinc-400);
+  color: var(--zinc-300);
   max-width: 36rem;
   margin-bottom: 2rem;
   line-height: 1.7;
@@ -384,12 +397,16 @@ ul {
 
 .section-label {
   display: block;
-  color: var(--ayvant-red);
-  font-weight: 600;
+  color: var(--ayvant-red-hover);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
+}
+
+.section-dark .section-label {
+  color: var(--ayvant-red);
 }
 
 .section-title {
@@ -418,7 +435,7 @@ ul {
 }
 
 .section-dark .section-subtitle {
-  color: var(--zinc-400);
+  color: var(--zinc-300);
 }
 
 .section-red .section-subtitle {
@@ -693,7 +710,7 @@ ul {
 }
 
 .footer-bottom p {
-  color: var(--zinc-500);
+  color: var(--zinc-300);
   font-size: 0.875rem;
 }
 
@@ -703,7 +720,7 @@ ul {
 }
 
 .footer-legal a {
-  color: var(--zinc-500);
+  color: var(--zinc-300);
   font-size: 0.875rem;
   transition: color 0.2s;
 }
@@ -745,7 +762,7 @@ ul {
 }
 
 .cookie-banner p {
-  color: white;
+  color: var(--zinc-200);
   font-size: 0.875rem;
 }
 
@@ -1055,7 +1072,7 @@ ul {
 }
 
 .section-dark .process-step p {
-  color: var(--zinc-400);
+  color: var(--zinc-300);
 }
 
 /* Contact Info */
@@ -1114,7 +1131,7 @@ ul {
 }
 
 .dark-card p {
-  color: var(--zinc-400);
+  color: var(--zinc-300);
   margin-bottom: 1.5rem;
 }
 
@@ -1306,10 +1323,10 @@ ul {
 .blog-tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background: rgba(227, 24, 55, 0.1);
-  color: var(--ayvant-red);
+  background: var(--ayvant-red-hover);
+  color: white;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-radius: 2px;
