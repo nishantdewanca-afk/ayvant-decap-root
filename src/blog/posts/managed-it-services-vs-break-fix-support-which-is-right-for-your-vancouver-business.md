@@ -10,7 +10,7 @@ excerpt: Most Vancouver businesses start with break-fix IT support because it
 featuredImage: /images/uploads/cost-overview.jpg
 tags:
   - ManagedIT
-featured: false
+featured: true
 readTime: 6
 draft: false
 ---
