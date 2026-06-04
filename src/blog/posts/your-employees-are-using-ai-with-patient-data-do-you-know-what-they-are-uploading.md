@@ -8,7 +8,9 @@ excerpt: Healthcare staff are uploading patient data to consumer AI tools every
   actually looks like.
 featuredImage: /images/uploads/artificial-intelligence-in-healthcare.png
 tags:
-  - IT Support
+  - Artificial Intelligence
+  - Healthcare
+  - HealthTech
 featured: false
 readTime: 5
 draft: false
@@ -174,7 +176,7 @@ Patients whose records are handled by your staff deserve more than an unchecked 
 
 Ayvant provides cybersecurity and IT compliance services for healthcare organizations across Greater Vancouver and the Los Angeles Area. We help clinics, medical offices, and healthcare networks assess their current AI exposure, deploy enterprise-compliant AI tools, and build the monitoring infrastructure that turns policy into practice.
 
-**→ Book a free AI risk assessment: Booking Link**
+**→ Book a free AI risk assessment: [Booking Link](https://api.leadconnectorhq.com/widget/bookings/30-minute-free-consultation-ayvant)**
 
 **→ Email:** info@ayvant.com / hello@ayvant.ca
 
