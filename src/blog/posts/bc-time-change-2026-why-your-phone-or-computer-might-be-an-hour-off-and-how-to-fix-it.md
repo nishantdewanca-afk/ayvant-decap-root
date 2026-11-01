@@ -97,21 +97,29 @@ Google flagged this one publicly ahead of the change. Older Android software may
 
 This is where the real headaches show up, usually a few days later. A clock that’s an hour off is obvious. A meeting that quietly moved by an hour is not.
 
-* Recurring meetings created before today might shift, especially ones with people in the U.S. or Alberta. Open your next two weeks and eyeball them.
-* Outlook on the web and new Outlook: Settings > Calendar > View > Time zones, then set it to (UTC-07:00) Pacific Time (British Columbia).
-* Only the organizer should fix a shared meeting. If everyone edits their own copy, things get messy fast.
-* Google Calendar is moving most affected events back automatically. Check the web version for a “Move one hour earlier” prompt on anything it couldn’t fix. Invites that came from Outlook aren’t included.
-* Booking tools like Calendly, Jane, Clio, or your dental scheduling software each have their own time zone setting. Check them, and double-check any appointment reminders going to clients this week.
+\- Recurring meetings created before today might shift, especially ones with people in the U.S. or Alberta. Open your next two weeks and eyeball them.
+
+\- Outlook on the web and new Outlook: Settings > Calendar > View > Time zones, then set it to (UTC-07:00) Pacific Time (British Columbia).
+
+\- Only the organizer should fix a shared meeting. If everyone edits their own copy, things get messy fast.
+
+\- Google Calendar is moving most affected events back automatically. Check the web version for a “Move one hour earlier” prompt on anything it couldn’t fix. Invites that came from Outlook aren’t included.
+
+\- Booking tools like Calendly, Jane, Clio, or your dental scheduling software each have their own time zone setting. Check them, and double-check any appointment reminders going to clients this week.
 
 ## For business owners: a quick checklist
 
 If you run an office, a wrong clock is more than an annoyance. It’s missed appointments, payroll punches in the wrong hour, and log timestamps that don’t line up when you need them for an audit or a security investigation. Here’s what we're checking for our own clients this week:
 
-* Every workstation and laptop is patched and has been restarted since October.
-* Servers, firewalls, and network gear are pulling time from a reliable source and show UTC-7.
-* Time clocks, door access systems, phones (VoIP), and security cameras are showing the right time. These are the ones people forget.
-* Line-of-business apps (practice management, accounting, and CRM) have the correct time zone in their own settings.
-* Client-facing reminders and booking pages show the right time, especially if you serve U.S. clients.
+\- Every workstation and laptop is patched and has been restarted since October.
+
+\- Servers, firewalls, and network gear are pulling time from a reliable source and show UTC-7.
+
+\- Time clocks, door access systems, phones (VoIP), and security cameras are showing the right time. These are the ones people forget.
+
+\- Line-of-business apps (practice management, accounting, and CRM) have the correct time zone in their own settings.
+
+\- Client-facing reminders and booking pages show the right time, especially if you serve U.S. clients.
 
 ## The bottom line
 
