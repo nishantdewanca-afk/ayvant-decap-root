@@ -33,10 +33,13 @@ The good news: it’s usually a two-minute fix. Below is what’s going on, how 
 
 The short version: the clocks you set in March are the clocks you keep. The provincial law behind this was passed back in 2019, but it sat on the shelf waiting for Washington, Oregon, and California to move too. That didn’t happen, so B.C. went ahead on its own this year.
 
-* New name: Pacific Time (PCT). PST and PDT are retired in B.C.
-* Offset: UTC-7, the same as summertime. No more switching.
-* Alberta did something similar and is now on UTC-6 all year. East Kootenay communities like Cranbrook, Fernie, Golden, and Invermere stay matched with Alberta.
-* Northeast B.C. (Dawson Creek, Fort St. John, Fort Nelson, and others) already shows the same time as PCT, so nothing changes there.
+\- New name: Pacific Time (PCT). PST and PDT are retired in B.C.
+
+\- Offset: UTC-7, the same as summertime. No more switching.
+
+\- Alberta did something similar and is now on UTC-6 all year. East Kootenay communities like Cranbrook, Fernie, Golden, and Invermere stay matched with Alberta.
+
+\- Northeast B.C. (Dawson Creek, Fort St. John, Fort Nelson, and others) already shows the same time as PCT, so nothing changes there.
 
 The part that trips people up is our neighbors to the south. Washington, Oregon, and California did fall back. So for the first time, Vancouver is now an hour ahead of Seattle through the winter. If you work with U.S.clients or have a team in L.A., that matters.
 
