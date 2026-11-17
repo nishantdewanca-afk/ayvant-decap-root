@@ -43,7 +43,7 @@ const Hero = () => (
       <div className="lbl hidden md:block [writing-mode:vertical-rl] rotate-180 text-smoke">Langley, BC / Vancouver &amp; Lower Mainland</div>
       <div className="min-w-0">
         <p className="lbl text-signal mb-6 fu">Trusted by Law Firms &amp; Accounting Practices</p>
-        <h1 className="disp h1-size" data-testid="hero-headline">
+        <h1 className="disp leading-[1.02] tracking-[-0.03em] text-[8.4vw] md:text-[7.2vw] lg:text-[4.9vw] xl:text-[62px] [&_.ln>span]:whitespace-nowrap" data-testid="hero-headline">
           <span className="ln"><span>Your Business Deserves</span></span>
           <span className="ln"><span><em>Rock-Solid</em> IT Security</span></span>
         </h1>
