@@ -1,0 +1,18 @@
+# Ayvant IT Services
+
+> Ayvant provides managed IT, cybersecurity, compliance and AI governance for firms that handle sensitive information: law firms, private medical and dental practices, CPAs, accountants and financial firms. Founded in San Jose in 1985, rebranded to Ayvant in 2020, headquartered in Irvine, California and serving the entire United States.
+
+## Services
+- AI Governance: policies and guardrails for safe AI use at work
+- Cybersecurity: endpoint protection, email security and monitoring
+- Managed IT: help desk, devices, cloud and backups
+- Compliance: HIPAA, legal confidentiality and financial safeguards
+
+## Key pages
+- https://www.ayvant.com/ : Homepage, free security assessment booking, free guides, FAQ
+- https://www.ayvant.com/about : About Ayvant
+
+## Contact
+- Phone: +1 (949) 649-4114
+- Email: info@ayvant.com
+- Address: 2372 Morse Ave #241, Irvine, CA 92614
