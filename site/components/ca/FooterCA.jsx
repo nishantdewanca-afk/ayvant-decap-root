@@ -20,7 +20,7 @@ export const FooterCA = () => (
       <Newsletter />
       <div className="grid sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.3fr] gap-12 text-sm leading-[1.7]">
         <div>
-          <Logo light full className="h-14" />
+          <Logo light full className="!h-auto !w-full !max-w-[240px]" />
           <p className="lbl text-paper/60 mt-3">{BIZ.brand}</p>
           <p className="mt-4 text-paper/80 max-w-xs">{BIZ.description}</p>
           <div className="flex gap-4 mt-6">

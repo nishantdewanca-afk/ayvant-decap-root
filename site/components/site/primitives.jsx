@@ -3,7 +3,7 @@ import { IS_CA } from "@/lib/site";
 
 // ayvant.ca: the "Ayvant IT · Proudly Canadian" logo, dark text for light backgrounds, light text for dark ones.
 const LogoCA = ({ light, className }) => (
-  <img src={light ? "/ayvant-ca-logo-light.png" : "/ayvant-ca-logo.png"} alt="Ayvant IT, Proudly Canadian" className={`${className} w-auto`} width="473" height="117" />
+  <img src={light ? "/ayvant-ca-logo-light.png" : "/ayvant-ca-logo.png"} alt="Ayvant IT, Proudly Canadian" className={`${className} w-auto max-w-full object-contain object-left`} width="465" height="106" />
 );
 
 export const Logo = ({ light = false, full = false, className = "h-9" }) => IS_CA ? <LogoCA light={light} className={className} /> : (
