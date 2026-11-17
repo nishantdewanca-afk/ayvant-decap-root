@@ -164,3 +164,14 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 .h1-tight { font-size: clamp(42px, 4.6vw, 74px); }
+
+/* Accessibility: small red labels need 4.5:1 contrast. Brand red is fine on paper but too dark on ink,
+   and just short of it on sand, so those two get adjusted shades. */
+.bg-ink .lbl.text-signal { color: #ff6b5e; }
+.bg-sand .lbl.text-signal { color: #b80f0e; }
+
+/* Speed: on phones, show the headline and intro text straight away instead of animating them in,
+   so the main content paints sooner (Largest Contentful Paint). */
+@media (max-width: 767px) {
+  .ln > span, .fu { animation: none; }
+}

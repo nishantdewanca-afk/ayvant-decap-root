@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import ArticleView from "@/components/views/ArticleView";
 import { JsonLd } from "@/components/JsonLd";
-import { getAllPosts, getPost } from "@/lib/posts";
+import { getAllPosts, getPost, faqsOf } from "@/lib/posts";
 import { caMeta } from "@/lib/ca/meta";
 import { SITE_URL, SITE_CONFIG } from "@/lib/site";
 
@@ -20,8 +20,12 @@ export default async function Page({ params }) {
   const post = getPost((await params).slug);
   if (!post) notFound();
   const posts = getAllPosts().filter((x) => x.slug !== post.slug).slice(0, 3).map(({ body, ...x }) => x);
+  const faqs = faqsOf(post.body);
   return (
     <>
+      {faqs.length > 0 && (
+        <JsonLd data={{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) }} />
+      )}
       <JsonLd
         data={{
           "@context": "https://schema.org",

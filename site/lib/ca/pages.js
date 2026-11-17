@@ -59,6 +59,19 @@ export function restyle(html) {
   });
 }
 
+// Questions and answers in an original page's FAQ section (<h4>question?</h4><p>answer</p>), for FAQPage schema.
+const text = (s) => s.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&#39;|&rsquo;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, " ").trim();
+function faqsOf(html) {
+  const at = html.search(/class="section-label">\s*FAQ\s*</i);
+  if (at < 0) return [];
+  const out = [];
+  for (const m of html.slice(at).matchAll(/<h4[^>]*>([\s\S]*?)<\/h4>\s*<p[^>]*>([\s\S]*?)<\/p>/g)) {
+    const q = text(m[1]);
+    if (q.endsWith("?")) out.push([q, text(m[2])]);
+  }
+  return out;
+}
+
 let cache;
 export function getLegacyPages() {
   if (cache) return cache;
@@ -73,6 +86,7 @@ export function getLegacyPages() {
         metaTitle: data.metaTitle || data.title,
         description: data.metaDescription || "",
         html: restyle(content),
+        faqs: faqsOf(content),
       };
     });
   return cache;

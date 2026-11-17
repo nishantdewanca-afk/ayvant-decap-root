@@ -32,6 +32,21 @@ const fromCa = (m) => ({
   metaDescription: m.metaDescription || m.seo?.metaDescription,
 });
 
+// Questions and answers written as a bold question followed by its answer, for FAQPage schema.
+const plain = (s) => s.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/[*_`>#]/g, "").replace(/\s+/g, " ").trim();
+export function faqsOf(body = "") {
+  const blocks = body.split(/\n\s*\n/).map((b) => b.trim()).filter(Boolean);
+  const out = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const q = blocks[i].match(/^\*\*(.+\?)\*\*$/);
+    if (!q) continue;
+    const ans = [];
+    for (let j = i + 1; j < blocks.length && !/^(\*\*.+\?\*\*$|#)/.test(blocks[j]); j++) ans.push(plain(blocks[j]));
+    if (ans.length) out.push([plain(q[1]), ans.join(" ")]);
+  }
+  return out;
+}
+
 // Today's date in Pacific time, as YYYY-MM-DD. PUBLISH_AS_OF overrides it to preview a future day.
 export const today = () =>
   process.env.PUBLISH_AS_OF || new Date().toLocaleDateString("en-CA", { timeZone: "America/Los_Angeles" });

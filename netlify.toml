@@ -10,6 +10,25 @@
   # "true": indexable, with the sitemap in robots.txt. Set to "false" to hide the whole site from search engines.
   NEXT_PUBLIC_INDEXABLE = "true"
 
+# Security headers for every page. The CSP limits framing, plugins, <base> and form targets; it does not
+# restrict scripts, so GoHighLevel forms and chat, Google Analytics and Meta keep working. HSTS leaves out
+# includeSubDomains so other *.ayvant.ca services aren't forced onto HTTPS by this site.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+    Content-Security-Policy = "frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests"
+
+# Next.js build files have a content hash in their name, so browsers can keep them for a year.
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/og/*"
   [headers.values]

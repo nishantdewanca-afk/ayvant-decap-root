@@ -7,7 +7,7 @@ const path = href("/security-check");
 
 export const metadata = pageMeta({
   title: IS_CA
-    ? "How Protected Is Your Firm? Free 2-Minute Security Check | Ayvant IT & Cybersecurity"
+    ? "Free 2-Minute Security Check for BC Firms | Ayvant"
     : "How Protected Is Your Firm? Free 2-Minute Security Check | Ayvant",
   description: IS_CA
     ? "Ten quick yes-or-no questions for law firms, accountants and healthcare practices in BC. Get a protection score and a plain-English list of what to fix first."

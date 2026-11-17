@@ -11,6 +11,9 @@ between the two repos. Make ayvant.ca changes here only.
 - Learning Hub posts (at /learning-hub/; old /blog/ URLs 301 there): `content/ca/blog/`, images `site/public/images/uploads/`, edited in Decap at ayvant.ca/admin (Netlify Identity + Git Gateway; config `site/public-ca/admin/config.yml`).
 - Policies (BC PIPA, PIPEDA, CASL): `content/legal/ca/`. Have counsel review them.
 - Redirects: `site/scripts/redirects.mjs` writes `_redirects` at build time.
+- Security headers and long caching for `/_next/static/*` are in `netlify.toml` (the CSP doesn't restrict scripts, so GHL forms and chat keep working).
+- SEO/AEO: `caMeta()` fits titles to 60 characters and `pageMeta()` descriptions to 160; FAQ sections in original pages and bold-question posts get FAQPage schema automatically; `site/public-ca/llms.txt` summarises the site for AI answer engines.
+- hreflang pairs with ayvant.com: `PAIRS` in `site/lib/site.js` (ayvant.com has the matching list in its `site/lib/seo.js`).
 - Brand: paper `#f4f2ec`, ink `#141414`, signal red `#cd1312`; Newsreader and Source Sans 3. Plain-English copy.
 
 Open items: add the Canadian Meta Pixel ID (`metaPixelId` in `site/lib/site.js`) and update the cookie and privacy policies' advertising sections; host Sean's and Claude's team photos (still on Wix's CDN).

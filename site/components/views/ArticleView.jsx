@@ -14,6 +14,8 @@ import { BIZ } from "@/lib/content";
 import { IS_CA, BLOG_PATH, postHref } from "@/lib/site";
 
 const md = {
+  // A post body should not add a second page heading, so a markdown "# " heading renders as a section heading.
+  h1: (p) => <h2 className="disp text-3xl md:text-4xl mt-14 mb-5" {...p} />,
   h2: (p) => <h2 className="disp text-3xl md:text-4xl mt-14 mb-5" {...p} />,
   h3: (p) => <h3 className="text-xl font-bold mt-10 mb-3" {...p} />,
   p: (p) => <p className="mb-6" {...p} />,

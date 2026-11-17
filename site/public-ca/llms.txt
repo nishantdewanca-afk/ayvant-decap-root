@@ -1,0 +1,36 @@
+# Ayvant IT & Cybersecurity (ayvant.ca)
+
+> Ayvant IT & Cybersecurity Inc. provides managed IT support, cybersecurity, IT consulting and AI governance for law firms, accountants, healthcare practices and other professional service businesses in Vancouver and the Lower Mainland, British Columbia. Offices in Langley (20627 Fraser Hwy, Langley, BC V3A 4G4, (604) 239-2090) and Surrey (2677 192 St Suite 102, Surrey, BC V3S 3X1, (778) 909-5896). Email hello@ayvant.ca. Emergency support available 24/7.
+
+Ayvant's sister company in the United States is Ayvant Inc. (https://www.ayvant.com), based in Irvine, California.
+
+## Services
+
+- [Cybersecurity](https://ayvant.ca/pages/cybersecurity/): security assessments, 24/7 threat monitoring, data protection, compliance management (including PIPEDA and BC PIPA), email security and endpoint protection.
+- [IT Support](https://ayvant.ca/pages/it-support/): managed IT and helpdesk support with a local team in the Lower Mainland.
+- [IT Consulting](https://ayvant.ca/pages/it-consulting/): technology planning aligned with business goals.
+- [AI Governance](https://ayvant.ca/pages/ai-governance/): AI usage assessments, AI acceptable use policies, approved tools and safe settings, data protection controls, vendor reviews, staff training and monitoring, built on the NIST AI RMF and in line with ISO/IEC 42001.
+- [Free Email Security Scan](https://ayvant.ca/pages/email-security-scan/): checks a domain's SPF, DKIM and DMARC.
+- [2-minute security check](https://ayvant.ca/security-check/): "How protected is your firm?" self-assessment.
+
+## Industries
+
+- [IT support for law firms (Vancouver)](https://ayvant.ca/locations/it-support-for-law-firms-vancouver/)
+- [IT support for accountants (Vancouver)](https://ayvant.ca/locations/it-support-for-accountants-vancouver/)
+- [IT support for healthcare (Vancouver)](https://ayvant.ca/locations/it-support-for-healthcare-vancouver/)
+
+## Service areas
+
+Vancouver, Surrey, Langley, Burnaby, Richmond, Coquitlam, Port Moody, Delta, Abbotsford and Chilliwack, BC. Each has a page under https://ayvant.ca/locations/ (Surrey: https://ayvant.ca/managed-it-services-surrey/).
+
+## Company
+
+- [About Ayvant](https://ayvant.ca/pages/about/): a local team in Langley and Surrey; the Ayvant story began in San Jose in 1985 and the company became Ayvant in 2020.
+- [Contact](https://ayvant.ca/pages/contact/)
+- [Learning Hub](https://ayvant.ca/learning-hub/): plain-English articles on IT and cybersecurity for BC professional firms ([RSS](https://ayvant.ca/learning-hub/rss.xml)).
+- [Frequently asked questions](https://ayvant.ca/learning-hub/frequently-asked-questions/)
+
+## Policies
+
+- [Privacy Policy](https://ayvant.ca/pages/privacy-policy/) (BC PIPA, PIPEDA, CASL)
+- [Terms of Service](https://ayvant.ca/pages/terms-of-service/)
