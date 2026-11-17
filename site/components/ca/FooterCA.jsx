@@ -3,7 +3,7 @@ import { Linkedin, Facebook, Twitter } from "lucide-react";
 import { Logo } from "@/components/site/primitives";
 import { Newsletter } from "@/components/site/Newsletter";
 import { CookieSettingsButton } from "@/components/consent/PrivacyLinks";
-import { BIZ, SERVICES, INDUSTRIES, AREAS, LEGAL } from "@/lib/ca/content";
+import { BIZ, NAV_SERVICES, INDUSTRIES, AREAS, LEGAL } from "@/lib/ca/content";
 
 const ICONS = { LinkedIn: Linkedin, Facebook, X: Twitter };
 
@@ -35,7 +35,7 @@ export const FooterCA = () => (
           </div>
         </div>
         <Col title="Our Services">
-          {SERVICES.map((s) => <li key={s.id}><a href={s.href} className="ul-link">{s.name}</a></li>)}
+          {NAV_SERVICES.map((s) => <li key={s.id}><a href={s.href} className="ul-link">{s.name}</a></li>)}
           <li><a href={BIZ.aboutUrl} className="ul-link">About Us</a></li>
           <li><a href={BIZ.contactUrl} className="ul-link">Contact</a></li>
         </Col>
@@ -65,8 +65,8 @@ export const FooterCA = () => (
       <div className="mt-16 pt-8 border-t border-paper/20 flex flex-wrap justify-between gap-6 text-xs text-paper/60">
         <nav className="flex flex-wrap gap-6" aria-label="Footer">
           <a href="/security-check/" className="ul-link">Security check</a>
-          <a href="/blog/" className="ul-link">Blog</a>
-          <a href="/blog/rss.xml" className="ul-link" data-testid="footer-rss">RSS</a>
+          <a href="/learning-hub/" className="ul-link">Learning Hub</a>
+          <a href="/learning-hub/rss.xml" className="ul-link" data-testid="footer-rss">RSS</a>
           <a href={BIZ.clientPortal} target="_blank" rel="noopener noreferrer" className="ul-link">Client Portal</a>
         </nav>
         <nav className="flex flex-wrap gap-x-6 gap-y-3 w-full" aria-label="Legal">

@@ -6,6 +6,9 @@ export const BIZ = {
   legal: "Ayvant IT & Cybersecurity Inc.",
   phone: "(604) 239-2090",
   tel: "tel:+16042392090",
+  // The number shown in the site header.
+  headerPhone: "(778) 909-5896",
+  headerTel: "tel:+17789095896",
   email: "hello@ayvant.ca",
   street: "20627 Fraser Hwy",
   city: "Langley, BC V3A 4G4",
@@ -31,6 +34,10 @@ export const SERVICES = [
   { id: "it-consulting", name: "IT Consulting", href: "/pages/it-consulting/", line: "Strategic technology guidance to help your business grow. We align your IT infrastructure with your business goals for maximum impact." },
 ];
 
+// Services shown in the navigation and footer: the three from the original site, plus AI Governance.
+export const AI_GOVERNANCE = { id: "ai-governance", name: "AI Governance", href: "/pages/ai-governance/", line: "Use AI at work safely, with clear rules, controls and BC privacy law in mind." };
+export const NAV_SERVICES = [...SERVICES, AI_GOVERNANCE];
+
 export const INDUSTRIES = [
   { id: "law-firms", name: "Law Firms", line: "Legal IT Specialists", vancouver: "/locations/it-support-for-law-firms-vancouver/", surrey: "/locations/it-support-for-law-firms-surrey/" },
   { id: "accountants", name: "Accountants", line: "Accounting IT Specialists", vancouver: "/locations/it-support-for-accountants-vancouver/", surrey: "/locations/it-support-for-accountants-surrey/" },
@@ -49,14 +56,13 @@ export const AREAS = [
 
 export const NAV = {
   dropdowns: [
-    { label: "Services", href: "/pages/cybersecurity/", testid: "nav-services", cols: 1, items: SERVICES.map((s) => ({ id: s.id, name: s.name, line: s.line.split(". ")[0] + ".", href: s.href })) },
+    { label: "Services", href: "/pages/cybersecurity/", testid: "nav-services", cols: 1, items: NAV_SERVICES.map((s) => ({ id: s.id, name: s.name, line: s.line.split(". ")[0].replace(/\.$/, "") + ".", href: s.href })) },
     { label: "Industries", href: INDUSTRIES[0].vancouver, testid: "nav-industries", cols: 1, items: INDUSTRIES.map((x) => ({ id: x.id, name: x.name, line: x.line, href: x.vancouver })) },
   ],
   links: [
-    ["Blog", "/blog/"],
+    ["Learning Hub", "/learning-hub/"],
     ["About", "/pages/about/"],
     ["Contact", "/pages/contact/"],
-    ["Client Portal", BIZ.clientPortal],
   ],
   cta: { href: "/pages/contact/#contact-form", label: "Free assessment", mobileLabel: "Get a Free Assessment", menuLabel: "Not sure what you need? Get a free assessment" },
 };

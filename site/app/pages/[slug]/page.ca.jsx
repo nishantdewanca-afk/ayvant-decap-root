@@ -1,6 +1,8 @@
 // ayvant.ca /pages/<slug>/: About and Contact (rebuilt), the policies (BC), and the original service pages.
 import { notFound } from "next/navigation";
 import AboutCA from "@/components/ca/AboutCA";
+import AiGovernanceCA from "@/components/ca/AiGovernanceCA";
+import { AI_FAQS } from "@/lib/ca/aiGovernance";
 import ContactCA from "@/components/ca/ContactCA";
 import LegacyPage from "@/components/ca/LegacyPage";
 import LegalPage from "@/components/LegalPage";
@@ -17,6 +19,7 @@ const legacy = () => getLegacyPages().filter((p) => p.route.startsWith("/pages/"
 export const generateStaticParams = () => [
   { slug: "about" },
   { slug: "contact" },
+  { slug: "ai-governance" },
   ...Object.keys(CA_LEGAL).map((slug) => ({ slug })),
   ...legacy().map((p) => ({ slug: p.route.split("/")[2] })),
 ];
@@ -36,6 +39,38 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const { slug } = await params;
   if (slug === "about") return <AboutCA />;
+  if (slug === "ai-governance")
+    return (
+      <>
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Service",
+                "@id": `${SITE_URL}/pages/ai-governance/#service`,
+                name: "AI Governance",
+                serviceType: "AI governance and responsible AI consulting",
+                description: "AI usage assessments, AI acceptable use policies, approved AI tools and safe settings, data protection controls, vendor reviews, staff training and ongoing monitoring for law firms, accountants and healthcare practices.",
+                provider: { "@id": `${SITE_URL}/#business` },
+                areaServed: ["Vancouver", "Surrey", "Langley", "Burnaby", "Richmond", "Coquitlam", "Delta", "Abbotsford", "Chilliwack", "Port Moody"].map((name) => ({ "@type": "City", name })),
+                audience: { "@type": "BusinessAudience", name: "Law firms, accounting firms and healthcare practices" },
+                url: `${SITE_URL}/pages/ai-governance/`,
+              },
+              { "@type": "FAQPage", mainEntity: AI_FAQS.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+                  { "@type": "ListItem", position: 2, name: "AI Governance", item: `${SITE_URL}/pages/ai-governance/` },
+                ],
+              },
+            ],
+          }}
+        />
+        <AiGovernanceCA />
+      </>
+    );
   if (slug === "contact")
     return (
       <>

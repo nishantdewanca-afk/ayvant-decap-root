@@ -5,12 +5,12 @@ backend:
   name: git-gateway
   branch: main
 site_url: https://ayvant.ca
-display_url: https://ayvant.ca/blog/
+display_url: https://ayvant.ca/learning-hub/
 media_folder: site/public/images/uploads
 public_folder: /images/uploads
 collections:
   - name: blog
-    label: Blog Posts
+    label: Learning Hub
     label_singular: Post
     folder: content/ca/blog
     create: true

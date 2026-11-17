@@ -25,7 +25,7 @@ function cardsCA() {
     { path: "/security-check/", title: "How protected is your firm? Take the 2-minute check.", eyebrow: "Free security check" },
     ...Object.entries(CA_LEGAL).map(([slug, file]) => ({ path: `/pages/${slug}/`, title: getLegal(file).title, eyebrow: "Legal" })),
     ...getLegacyPages().map((p) => ({ path: p.route, title: p.title, eyebrow: kind(p.route) })),
-    ...getAllPosts().map((p) => ({ path: `/blog/${p.slug}/`, title: p.title, eyebrow: p.type })),
+    ...getAllPosts().map((p) => ({ path: `/learning-hub/${p.slug}/`, title: p.title, eyebrow: p.type })),
   ].map((c) => ({ ...c, key: `${ogKey(c.path)}.png` }));
 }
 

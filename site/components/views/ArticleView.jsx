@@ -28,7 +28,7 @@ const Article = ({ p }) => {
   return (
     <article data-testid="article">
       <header className="max-w-3xl mx-auto px-6 pt-14 md:pt-20">
-        <a href={BLOG_PATH} className="lbl inline-flex items-center gap-2 text-smoke hover:text-signal" data-testid="article-back-link"><ArrowLeft size={14} /> {IS_CA ? "Back to Blog" : "Learning Hub"}</a>
+        <a href={BLOG_PATH} className="lbl inline-flex items-center gap-2 text-smoke hover:text-signal" data-testid="article-back-link"><ArrowLeft size={14} /> Learning Hub</a>
         <p className="lbl mt-10 flex flex-wrap gap-x-3"><span className="text-signal">{p.type}</span>{IS_CA && <span className="text-smoke">{p.author || "Ayvant Team"}</span>}<span className="text-smoke">{fmtDate(p.date)}</span>{p.read_time && <span className="text-smoke">{p.read_time}</span>}</p>
         <h1 className="disp text-[40px] md:text-[60px] leading-[1.05] mt-4" data-testid="article-title">{p.title}</h1>
         <p className="text-xl leading-[1.6] text-ink/75 mt-6">{p.excerpt}</p>
@@ -55,7 +55,7 @@ const More = ({ slug, posts }) => {
   if (!more.length) return null;
   return (
     <section className="max-w-6xl mx-auto px-6 pb-24">
-      <h2 className="disp h2-size mb-10">{IS_CA ? "More from the blog." : "Keep reading."}</h2>
+      <h2 className="disp h2-size mb-10">Keep reading.</h2>
       <div className="grid md:grid-cols-3 gap-6">{more.map((x, i) => <PostCard key={x.slug} p={x} i={i} testid={`more-post-${i}`} />)}</div>
     </section>
   );

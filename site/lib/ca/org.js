@@ -32,7 +32,7 @@ export const ORG_JSONLD_CA = {
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "IT & Cybersecurity Services",
-    itemListElement: ["Managed IT Support", "Cybersecurity Services", "Cloud Services", "Network Management", "IT Consulting"].map((name) => ({
+    itemListElement: ["Managed IT Support", "Cybersecurity Services", "Cloud Services", "Network Management", "IT Consulting", "AI Governance"].map((name) => ({
       "@type": "Offer",
       itemOffered: { "@type": "Service", name },
     })),

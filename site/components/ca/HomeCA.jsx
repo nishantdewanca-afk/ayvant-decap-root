@@ -67,6 +67,18 @@ const Hero = () => (
   </section>
 );
 
+// The scrolling services bar, as on ayvant.com.
+const TICK = ["Cybersecurity", "IT Support", "IT Consulting", "AI Governance", "24/7 Emergency Support"];
+const Ticker = () => (
+  <section className="bg-ink text-paper py-6 overflow-hidden" aria-label="Services ticker" data-testid="services-ticker">
+    <div className="mq disp italic text-3xl md:text-4xl gap-12 pr-12">
+      {[...TICK, ...TICK].map((t, i) => (
+        <span key={i} className="flex gap-12 whitespace-nowrap">{t}<span className="text-signal">/</span></span>
+      ))}
+    </div>
+  </section>
+);
+
 const Services = () => (
   <Section id="services" className="bg-paper text-ink border-t border-ink" testid="services-section">
     <RailGrid>
@@ -126,14 +138,14 @@ const Blog = ({ posts }) =>
   posts.length > 0 && (
     <Section id="blog" className="bg-paper text-ink" testid="learning-hub-section">
       <RailGrid>
-        <RailLabel n="03">From Our Blog</RailLabel>
+        <RailLabel n="03">Learning Hub</RailLabel>
         <div className="min-w-0">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-12 reveal">
             <div className="max-w-2xl">
               <h2 className="disp h2-size">Latest IT &amp; Security Insights</h2>
               <p className="text-[17px] leading-[1.6] mt-4">Expert advice on protecting your business, optimizing your technology, and staying ahead of cyber threats.</p>
             </div>
-            <a href="/blog/" className="inline-flex items-center gap-2 font-semibold border-b-2 border-signal pb-1 hover:text-signal transition-colors" data-testid="hub-all-link">
+            <a href="/learning-hub/" className="inline-flex items-center gap-2 font-semibold border-b-2 border-signal pb-1 hover:text-signal transition-colors" data-testid="hub-all-link">
               View All Articles <ArrowRight size={16} />
             </a>
           </div>
@@ -175,6 +187,7 @@ export default function HomeCA({ posts }) {
       <Header />
       <main id="top">
         <Hero />
+        <Ticker />
         <Services />
         <Why />
         <Blog posts={posts} />

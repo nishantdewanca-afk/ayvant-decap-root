@@ -1,5 +1,5 @@
 "use client";
-// ayvant.ca Blog index: the original words, in the ayvant.com Learning Hub design.
+// ayvant.ca Learning Hub index: the original words, in the ayvant.com Learning Hub design.
 import { Rss } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -28,10 +28,10 @@ export default function BlogCA({ posts }) {
       <main>
         <section className="pt-20 pb-12 md:pt-28 border-b border-ink" data-testid="hub-hero">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="lbl text-signal mb-6 fu">Our Blog</p>
+            <p className="lbl text-signal mb-6 fu">Learning Hub</p>
             <h1 className="disp h1-size max-w-4xl"><span className="ln"><span>IT &amp; Cybersecurity</span></span><span className="ln"><span><em>Insights</em></span></span></h1>
             <p className="fu d-1 text-lg md:text-xl leading-[1.6] mt-8 max-w-2xl">Expert advice on protecting your business, optimizing your technology, and staying ahead of cyber threats. Written for law firms, accountants, and professional service businesses.</p>
-            <a href="/blog/rss.xml" className="fu d-2 inline-flex items-center gap-2 mt-8 text-sm font-semibold text-smoke hover:text-signal" data-testid="hub-rss-link">
+            <a href="/learning-hub/rss.xml" className="fu d-2 inline-flex items-center gap-2 mt-8 text-sm font-semibold text-smoke hover:text-signal" data-testid="hub-rss-link">
               <Rss size={14} /> Subscribe via RSS
             </a>
           </div>

@@ -70,7 +70,7 @@ const MobileMenu = ({ close }) => (
     {NAV.links.map(([l, h]) => (
       <a key={h} href={h} onClick={close} className="disp text-3xl" data-testid={`mobile-nav-${linkId(h)}`} {...ext(h)}>{l}</a>
     ))}
-    <a href={BIZ.tel} className="inline-flex items-center gap-2 text-xl font-semibold" data-testid="mobile-call-link"><Phone size={20} className="text-signal" /> {BIZ.phone}</a>
+    <a href={BIZ.headerTel || BIZ.tel} className="inline-flex items-center gap-2 text-xl font-semibold" data-testid="mobile-call-link"><Phone size={20} className="text-signal" /> {BIZ.headerPhone || BIZ.phone}</a>
     <a href={NAV.cta.href} onClick={close} className="bg-signal text-white px-4 py-3 font-semibold text-center" data-testid="mobile-assessment-btn">{NAV.cta.mobileLabel}</a>
   </div>
 );
@@ -92,8 +92,8 @@ export const Header = () => {
           ))}
         </div>
         <div className="flex items-center gap-4">
-          <a href={BIZ.tel} className="inline-flex items-center gap-2 text-[15px] sm:text-base font-semibold whitespace-nowrap hover:text-signal transition-colors" aria-label={`Call ${BIZ.phone}`} data-testid="header-call-link">
-            <Phone size={18} className="text-signal shrink-0" /> <span className="max-[359px]:sr-only">{BIZ.phone}</span>
+          <a href={BIZ.headerTel || BIZ.tel} className="inline-flex items-center gap-2 text-[15px] sm:text-base font-semibold whitespace-nowrap hover:text-signal transition-colors" aria-label={`Call ${BIZ.headerPhone || BIZ.phone}`} data-testid="header-call-link">
+            <Phone size={18} className="text-signal shrink-0" /> <span className="max-[359px]:sr-only">{BIZ.headerPhone || BIZ.phone}</span>
           </a>
           <a href={NAV.cta.href} className="hidden md:inline-block bg-signal text-white px-4 py-2.5 text-sm font-semibold hover:bg-ink transition-colors" data-testid="header-assessment-btn">
             {NAV.cta.label}

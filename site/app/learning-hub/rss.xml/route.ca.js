@@ -1,4 +1,4 @@
-// RSS 2.0 feed of the ayvant.ca blog, built with the site.
+// RSS 2.0 feed of the ayvant.ca Learning Hub, built with the site.
 import { getAllPosts } from "@/lib/posts";
 import { SITE_URL } from "@/lib/seo";
 
@@ -10,10 +10,10 @@ const abs = (u) => (u && u.startsWith("/") ? `${SITE_URL}${u}` : u);
 
 export function GET() {
   const posts = getAllPosts().slice(0, 50);
-  const feed = `${SITE_URL}/blog/rss.xml`;
+  const feed = `${SITE_URL}/learning-hub/rss.xml`;
   const items = posts
     .map((p) => {
-      const url = `${SITE_URL}/blog/${p.slug}/`;
+      const url = `${SITE_URL}/learning-hub/${p.slug}/`;
       const img = abs(p.cover);
       const type = img && /\.png$/i.test(img) ? "image/png" : "image/jpeg";
       return `    <item>
@@ -29,13 +29,13 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Ayvant IT &amp; Cybersecurity Blog</title>
-    <link>${SITE_URL}/blog/</link>
+    <title>Ayvant Learning Hub (Canada)</title>
+    <link>${SITE_URL}/learning-hub/</link>
     <atom:link href="${feed}" rel="self" type="application/rss+xml" />
     <description>Expert insights on cybersecurity, IT support, and technology solutions for law firms and accounting practices in Vancouver and the Lower Mainland.</description>
     <language>en-ca</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-    <image><url>${SITE_URL}/ayvant-logo.png</url><title>Ayvant IT &amp; Cybersecurity Blog</title><link>${SITE_URL}/blog/</link></image>
+    <image><url>${SITE_URL}/ayvant-logo.png</url><title>Ayvant Learning Hub (Canada)</title><link>${SITE_URL}/learning-hub/</link></image>
 ${items}
   </channel>
 </rss>

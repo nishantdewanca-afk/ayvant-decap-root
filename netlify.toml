@@ -16,7 +16,7 @@
     Content-Type = "image/png"
 
 [[headers]]
-  for = "/blog/rss.xml"
+  for = "/learning-hub/rss.xml"
   [headers.values]
     Content-Type = "application/rss+xml; charset=utf-8"
 

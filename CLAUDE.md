@@ -6,9 +6,9 @@ between the two repos. Make ayvant.ca changes here only.
 
 - Next.js 15 static export in `site/`; `netlify.toml` sets base `site`, publish `out` and `NEXT_PUBLIC_SITE = "ca"`.
 - Build locally: `cd site && npm install && NEXT_PUBLIC_SITE=ca npm run build`.
-- Pages keep the original ayvant.ca URLs (trailing slash). Home, About, Contact and Blog views are in `site/components/ca/`; business info, nav, team and GHL embeds in `site/lib/ca/content.js`.
+- Pages keep the original ayvant.ca URLs (trailing slash). Home, About, Contact, AI Governance and Learning Hub views are in `site/components/ca/`; business info, nav, team and GHL embeds in `site/lib/ca/content.js`.
 - The original service and location pages are in `content/ca/pages/*.html`, restyled at build time by `site/lib/ca/pages.js` and `site/components/ca/legacy.css`. Edit the words there; don't add inline colours.
-- Blog posts: `content/ca/blog/`, images `site/public/images/uploads/`, edited in Decap at ayvant.ca/admin (Netlify Identity + Git Gateway; config `site/public-ca/admin/config.yml`).
+- Learning Hub posts (at /learning-hub/; old /blog/ URLs 301 there): `content/ca/blog/`, images `site/public/images/uploads/`, edited in Decap at ayvant.ca/admin (Netlify Identity + Git Gateway; config `site/public-ca/admin/config.yml`).
 - Policies (BC PIPA, PIPEDA, CASL): `content/legal/ca/`. Have counsel review them.
 - Redirects: `site/scripts/redirects.mjs` writes `_redirects` at build time.
 - Brand: paper `#f4f2ec`, ink `#141414`, signal red `#cd1312`; Newsreader and Source Sans 3. Plain-English copy.

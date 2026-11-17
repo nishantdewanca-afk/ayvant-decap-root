@@ -18,7 +18,7 @@ export default function sitemap() {
       page("/security-check/"),
       ...getLegacyPages().map((p) => page(p.route)),
       ...Object.keys(CA_LEGAL).map((s) => page(`/pages/${s}/`)),
-      ...getAllPosts().map((p) => page(`/blog/${p.slug}/`, p.date || today)),
+      ...getAllPosts().map((p) => page(`/learning-hub/${p.slug}/`, p.date || today)),
     ];
   return [
     page("/"),

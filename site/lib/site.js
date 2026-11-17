@@ -21,7 +21,7 @@ const SITES = {
     lang: "en-CA",
     metaPixelId: "", // Canadian Meta Pixel ID goes here
     gaId: "G-2B3N9Z8CCH",
-    feed: { url: "/blog/rss.xml", title: "Ayvant IT & Cybersecurity Blog" },
+    feed: { url: "/learning-hub/rss.xml", title: "Ayvant Learning Hub (Canada)" },
   },
 };
 
@@ -38,8 +38,9 @@ const PAIRS = [
   ["/about", "/pages/about/"],
   ["/contact", "/pages/contact/"],
   ["/security-check", "/security-check/"],
-  ["/learning-hub", "/blog/"],
+  ["/learning-hub", "/learning-hub/"],
   ["/services/cybersecurity", "/pages/cybersecurity/"],
+  ["/services/ai-governance", "/pages/ai-governance/"],
 ];
 export function hreflang(path) {
   const pair = PAIRS.find(([us, ca]) => (IS_CA ? ca : us) === path);
@@ -48,6 +49,6 @@ export function hreflang(path) {
   return { "en-US": `${SITES.us.url}${us}`, "en-CA": `${SITES.ca.url}${ca}`, "x-default": `${SITES.us.url}${us}` };
 }
 
-// Where posts live: the Learning Hub on ayvant.com, the Blog on ayvant.ca.
-export const BLOG_PATH = IS_CA ? "/blog/" : "/learning-hub";
-export const postHref = (slug) => (IS_CA ? `/blog/${slug}/` : `/learning-hub/${slug}`);
+// Where posts live: the Learning Hub on both sites.
+export const BLOG_PATH = IS_CA ? "/learning-hub/" : "/learning-hub";
+export const postHref = (slug) => (IS_CA ? `/learning-hub/${slug}/` : `/learning-hub/${slug}`);

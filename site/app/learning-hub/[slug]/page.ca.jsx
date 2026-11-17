@@ -11,7 +11,7 @@ export const generateStaticParams = () => getAllPosts().map((p) => ({ slug: p.sl
 export async function generateMetadata({ params }) {
   const p = getPost((await params).slug);
   if (!p) return {};
-  const meta = caMeta({ title: p.metaTitle || p.title, description: p.metaDescription || p.excerpt, path: `/blog/${p.slug}/`, type: "article" });
+  const meta = caMeta({ title: p.metaTitle || p.title, description: p.metaDescription || p.excerpt, path: `/learning-hub/${p.slug}/`, type: "article" });
   meta.openGraph.publishedTime = p.date;
   return meta;
 }
@@ -32,7 +32,7 @@ export default async function Page({ params }) {
           image: post.cover ? [post.cover.startsWith("/") ? `${SITE_URL}${post.cover}` : post.cover] : undefined,
           author: post.author ? { "@type": "Person", name: post.author } : { "@type": "Organization", name: SITE_CONFIG.name, url: SITE_URL },
           publisher: { "@id": `${SITE_URL}/#business` },
-          mainEntityOfPage: `${SITE_URL}/blog/${post.slug}/`,
+          mainEntityOfPage: `${SITE_URL}/learning-hub/${post.slug}/`,
         }}
       />
       <ArticleView post={post} posts={posts} />

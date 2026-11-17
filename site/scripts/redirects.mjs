@@ -22,8 +22,12 @@ if (process.env.NEXT_PUBLIC_SITE === "ca") {
     "/locations/it-support-surrey/  /managed-it-services-surrey/  301",
     "",
     "# Common feed addresses",
-    "/rss.xml  /blog/rss.xml  301",
-    "/feed  /blog/rss.xml  301",
+    "/rss.xml  /learning-hub/rss.xml  301",
+    "/feed  /learning-hub/rss.xml  301",
+    "",
+    "# The blog is now the Learning Hub",
+    "/blog  /learning-hub/  301",
+    "/blog/*  /learning-hub/:splat  301",
   ];
   fs.writeFileSync(OUT_FILE, lines.join("\n") + "\n");
   console.log(`_redirects (ca): ${lines.filter((l) => l.startsWith("/")).length} rules`);
