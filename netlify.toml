@@ -1,5 +1,4 @@
-# ayvant.ca (Next.js static export in /site). This repo is a copy of the ayvant-us-blog codebase,
-# kept in sync by ayvant-us-blog/scripts/sync-ca-repo.sh. NEXT_PUBLIC_SITE = "ca" builds the Canadian site.
+# ayvant.ca (Next.js static export in /site). NEXT_PUBLIC_SITE = "ca" builds the Canadian site.
 [build]
   base = "site"
   command = "npm run build"

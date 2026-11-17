@@ -1,8 +1,16 @@
 # ayvant.ca
 
-Deployed by Netlify from `main` of this repo. This repo is a copy of the shared Ayvant codebase in
-`nishantdewanca-afk/ayvant-us-blog` (which also builds ayvant.com); its CLAUDE.md has the full guide.
+The website for Ayvant IT & Cybersecurity Inc. (Langley and Surrey, BC). Netlify deploys `main` of this repo.
+This repo is independent: it started from the same Next.js codebase as ayvant.com, but nothing is synced
+between the two repos. Make ayvant.ca changes here only.
 
-- Make code and design changes in ayvant-us-blog, then run `scripts/sync-ca-repo.sh <this repo>` there and commit here.
-- Owned here, never overwritten by the sync: blog posts in `content/ca/blog/` and images in `site/public/images/uploads/` (edited in Decap at ayvant.ca/admin, Netlify Identity + Git Gateway).
-- `netlify.toml` sets `NEXT_PUBLIC_SITE = "ca"`. Build locally: `cd site && npm install && NEXT_PUBLIC_SITE=ca npm run build`.
+- Next.js 15 static export in `site/`; `netlify.toml` sets base `site`, publish `out` and `NEXT_PUBLIC_SITE = "ca"`.
+- Build locally: `cd site && npm install && NEXT_PUBLIC_SITE=ca npm run build`.
+- Pages keep the original ayvant.ca URLs (trailing slash). Home, About, Contact and Blog views are in `site/components/ca/`; business info, nav, team and GHL embeds in `site/lib/ca/content.js`.
+- The original service and location pages are in `content/ca/pages/*.html`, restyled at build time by `site/lib/ca/pages.js` and `site/components/ca/legacy.css`. Edit the words there; don't add inline colours.
+- Blog posts: `content/ca/blog/`, images `site/public/images/uploads/`, edited in Decap at ayvant.ca/admin (Netlify Identity + Git Gateway; config `site/public-ca/admin/config.yml`).
+- Policies (BC PIPA, PIPEDA, CASL): `content/legal/ca/`. Have counsel review them.
+- Redirects: `site/scripts/redirects.mjs` writes `_redirects` at build time.
+- Brand: paper `#f4f2ec`, ink `#141414`, signal red `#cd1312`; Newsreader and Source Sans 3. Plain-English copy.
+
+Open items: add the Canadian Meta Pixel ID (`metaPixelId` in `site/lib/site.js`) and update the cookie and privacy policies' advertising sections; host Sean's and Claude's team photos (still on Wix's CDN).
