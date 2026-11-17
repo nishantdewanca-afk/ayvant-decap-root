@@ -4,6 +4,7 @@
 backend:
   name: git-gateway
   branch: main
+logo_url: https://ayvant.ca/ayvant-ca-logo.png
 site_url: https://ayvant.ca
 display_url: https://ayvant.ca/learning-hub/
 media_folder: site/public/images/uploads

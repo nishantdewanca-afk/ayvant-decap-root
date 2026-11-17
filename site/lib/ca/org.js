@@ -10,7 +10,7 @@ export const ORG_JSONLD_CA = {
   description:
     "Ayvant IT & Cybersecurity provides managed IT support and cybersecurity services for law firms, accountants, and businesses in Vancouver and the Lower Mainland, BC.",
   url: "https://ayvant.ca",
-  logo: "https://ayvant.ca/ayvant-logo.png",
+  logo: "https://ayvant.ca/ayvant-ca-logo.png",
   telephone: "+1-604-239-2090",
   email: "hello@ayvant.ca",
   address: { "@type": "PostalAddress", streetAddress: "20627 Fraser Hwy", addressLocality: "Langley", addressRegion: "BC", postalCode: "V3A 4G4", addressCountry: "CA" },

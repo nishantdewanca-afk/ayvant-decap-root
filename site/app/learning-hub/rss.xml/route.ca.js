@@ -35,7 +35,7 @@ export function GET() {
     <description>Expert insights on cybersecurity, IT support, and technology solutions for law firms and accounting practices in Vancouver and the Lower Mainland.</description>
     <language>en-ca</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-    <image><url>${SITE_URL}/ayvant-logo.png</url><title>Ayvant Learning Hub (Canada)</title><link>${SITE_URL}/learning-hub/</link></image>
+    <image><url>${SITE_URL}/ayvant-ca-logo.png</url><title>Ayvant Learning Hub (Canada)</title><link>${SITE_URL}/learning-hub/</link></image>
 ${items}
   </channel>
 </rss>

@@ -61,13 +61,13 @@ const fonts = () => [
 export async function GET(_req, { params }) {
   const { key } = await params;
   const c = cards().find((x) => x.key === key);
-  const logo = `data:image/png;base64,${file("public/ayvant-wordmark.png").toString("base64")}`;
+  const logo = `data:image/png;base64,${file(IS_CA ? "public/ayvant-ca-logo.png" : "public/ayvant-wordmark.png").toString("base64")}`;
   const size = c.title.length < 60 ? 68 : 58;
   return new ImageResponse(
     (
       <div style={{ width: 1200, height: 630, display: "flex", flexDirection: "column", background: PAPER, position: "relative" }}>
         <div style={{ position: "absolute", left: 0, top: 0, width: 14, height: 630, background: RED }} />
-        <img src={logo} width={200} style={{ position: "absolute", left: 80, top: 64 }} />
+        <img src={logo} width={IS_CA ? 280 : 200} style={{ position: "absolute", left: 80, top: IS_CA ? 56 : 64 }} />
         <div style={{ position: "absolute", left: 80, top: 186, fontFamily: "Source Sans", fontWeight: 700, fontSize: 26, letterSpacing: 2, color: RED, textTransform: "uppercase" }}>{c.eyebrow}</div>
         <div style={{ position: "absolute", left: 80, top: 236, width: 1030, fontFamily: "Newsreader", fontWeight: 500, fontSize: size, lineHeight: 1.12, color: INK, display: "flex" }}>{c.title}</div>
         <div style={{ position: "absolute", left: 0, bottom: 0, width: 1200, height: 92, background: INK, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 80px", fontFamily: "Source Sans", fontWeight: 600, fontSize: 24, color: PAPER }}>
