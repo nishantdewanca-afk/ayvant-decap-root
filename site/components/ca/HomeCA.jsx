@@ -40,7 +40,7 @@ const Shield = () => (
 const Hero = () => (
   <section className="bg-paper text-ink pt-20 pb-24 md:pt-28 md:pb-32 overflow-hidden" data-testid="hero-section">
     <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[96px_1fr] lg:grid-cols-[96px_1fr_280px] gap-10 items-center">
-      <div className="lbl hidden md:block [writing-mode:vertical-rl] rotate-180 text-smoke">Langley, BC / Vancouver &amp; Lower Mainland</div>
+      <div className="lbl hidden md:block [writing-mode:vertical-rl] rotate-180 text-smoke">Vancouver &amp; Lower Mainland</div>
       <div className="min-w-0">
         <p className="lbl text-signal mb-6 fu">Trusted by Law Firms &amp; Accounting Practices</p>
         <h1 className="disp leading-[1.02] tracking-[-0.03em] text-[8.4vw] md:text-[7.2vw] lg:text-[4.9vw] xl:text-[62px] [&_.ln>span]:whitespace-nowrap" data-testid="hero-headline">
