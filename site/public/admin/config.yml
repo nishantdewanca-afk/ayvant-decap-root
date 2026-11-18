@@ -1,0 +1,36 @@
+# Decap CMS for the Learning Hub. Sign-in uses GitHub through Netlify's built-in OAuth provider
+# (Netlify > Site configuration > Access & security > OAuth > install the GitHub provider).
+backend:
+  name: github
+  repo: nishantdewanca-afk/ayvant-us-blog
+  branch: main
+site_url: https://www.ayvant.com
+display_url: https://www.ayvant.com/learning-hub
+media_folder: site/public/uploads
+public_folder: /uploads
+collections:
+  - name: blog
+    label: Learning Hub
+    label_singular: Post
+    folder: content/blog
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    slug: "{{slug}}"
+    summary: "{{type}} / {{title}}"
+    sortable_fields: [date, title, type]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: URL slug, name: slug, widget: string, hint: "lowercase-words-with-dashes" }
+      - { label: Type, name: type, widget: select, options: [Blog, Tutorial, KB Article], default: Blog }
+      - { label: Publish date, name: date, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, hint: "A future date schedules the post. It goes live that morning (Pacific time)." }
+      - { label: Short summary, name: excerpt, widget: text, hint: "One or two sentences shown on cards and in Google." }
+      - { label: Cover image, name: cover, widget: image, required: false }
+      - { label: Read time, name: read_time, widget: string, required: false, hint: "e.g. 4 min read" }
+      - { label: Feature on homepage, name: featured, widget: boolean, default: false }
+      - { label: Published, name: published, widget: boolean, default: true }
+      - { label: Body, name: body, widget: markdown }
+      # Kept from the Wix import so old links keep working. Not shown in the editor.
+      - { label: Old Wix URL, name: old_url, widget: hidden, required: false }
+      - { label: Location page, name: location_page, widget: hidden, required: false }
+      - { label: Rewrite priority, name: rewrite, widget: hidden, required: false }

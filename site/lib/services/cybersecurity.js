@@ -1,0 +1,105 @@
+// Cybersecurity service page content. First draft written for Ayvant to review.
+export const cybersecurity = {
+  slug: "cybersecurity",
+  name: "Cybersecurity",
+  seo: {
+    title: "Cybersecurity Services for Law Firms, Medical Practices & CPAs | Ayvant",
+    description: "Managed cybersecurity for law firms, medical and dental practices and CPA firms. Endpoint protection, email security, MFA, tested backups and 24x7 emergency support. Irvine, CA, serving the US.",
+  },
+  hero: {
+    eyebrow: "Managed cybersecurity services",
+    lines: ["Cybersecurity for firms", "that can't <em>afford</em>", "a breach."],
+    sub: "We protect the email, devices and data of law firms, medical and dental practices, and CPA and financial firms. Quietly, every day, with a real person on the line when you need one.",
+    facts: ["Since 1985", "24x7 emergency support", "Serving all 50 states"],
+  },
+  answer: {
+    q: "What is managed cybersecurity?",
+    a: "Managed cybersecurity means an outside team protects, watches and responds for your business on an ongoing basis. Instead of buying security tools and hoping someone checks them, Ayvant runs them for you: endpoint protection, email security, multi-factor sign-in, tested backups, staff training and emergency response, documented so you can show clients, insurers and regulators what you do.",
+  },
+  about: {
+    title: "Most break-ins don't look like the movies.",
+    body: [
+      "For a small law office or a busy dental practice, the attack rarely starts with a hooded hacker. It starts with an ordinary-looking email, a reused password, a laptop that missed its updates, or a convincing message asking accounting to change wiring instructions.",
+      "That's why good cybersecurity for a professional firm isn't one product. It's a handful of controls done consistently, with someone paying attention and a plan for the day something slips through.",
+      "We set those controls up, keep them running, check them, and write it all down. You keep your focus on clients and patients. We keep the doors locked.",
+    ],
+    img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    alt: "Professional working on a laptop in a quiet office",
+  },
+  industries: [
+    {
+      id: "law",
+      name: "Law firms",
+      title: "Protecting privilege, not just passwords.",
+      body: "Your duty of confidentiality extends to your technology. ABA Model Rule 1.6(c) asks lawyers to make reasonable efforts to prevent unauthorized access to client information, and more corporate clients now send security questionnaires before they hire outside counsel.",
+      points: ["Wire and settlement fraud prevention on email", "Secure remote access for court, home and office", "Answers ready for client security questionnaires"],
+    },
+    {
+      id: "medical",
+      name: "Medical & dental",
+      title: "HIPAA safeguards that actually work at the front desk.",
+      body: "The HIPAA Security Rule expects practices to protect electronic patient information with administrative, physical and technical safeguards, and to keep a current risk analysis. Ransomware that locks your practice software or imaging can stop a whole day of appointments.",
+      points: ["Protection for practice management and imaging systems", "Risk analysis support and documented safeguards", "Business Associate Agreement on request"],
+    },
+    {
+      id: "finance",
+      name: "CPAs & finance",
+      title: "Ready for tax season, and for the Safeguards Rule.",
+      body: "The FTC Safeguards Rule requires many accounting and financial firms to keep a written information security program, use multi-factor authentication and encrypt customer data. Tax preparers are also asked to keep a written security plan, and advisers face SEC Regulation S-P.",
+      points: ["Written information security program (WISP) support", "MFA and encryption across email, portals and laptops", "Phishing defense for deadline-season pressure"],
+    },
+  ],
+  benefits: [
+    ["Fewer bad days", "Most common attacks are stopped before they reach a person's inbox or laptop."],
+    ["A person, not a portal", "When something looks wrong, you call and a real person answers fast."],
+    ["Proof on paper", "Policies, reports and records ready for auditors, clients and insurers."],
+    ["Insurance-ready", "The controls cyber insurers ask about, like MFA, endpoint protection and backups, in place and documented."],
+    ["One accountable team", "Security, IT support and compliance under one roof, so nothing falls between vendors."],
+    ["Calm staff", "Plain-English training that makes your team the first line of defense, not the weak link."],
+  ],
+  included: [
+    { group: "Protect", items: [
+      ["Managed endpoint protection", "Monitored protection on every computer and server, not just antivirus."],
+      ["Email security", "Filtering for phishing, malware and impersonation attempts."],
+      ["Multi-factor sign-in", "On email, remote access and the apps that hold client data."],
+      ["Patching and updates", "Operating systems and key software kept up to date on a schedule."],
+      ["Encryption", "Laptops and sensitive data encrypted, with a plan for lost devices."],
+      ["Firewall and Wi-Fi", "Office network hardened, guest Wi-Fi kept separate."],
+    ]},
+    { group: "Detect", items: [
+      ["Continuous monitoring", "Alerts reviewed by our team, not left in an inbox nobody reads."],
+      ["Vulnerability scanning", "Regular checks for weak spots before an attacker finds them."],
+      ["Dark web monitoring", "A heads-up when staff credentials show up in a breach."],
+    ]},
+    { group: "Respond", items: [
+      ["24x7 emergency support", "Someone to call when something can't wait for Monday."],
+      ["Incident response plan", "Who does what, written down before you need it."],
+      ["Tested backup and recovery", "Backups we actually restore from, so recovery isn't a guess."],
+    ]},
+    { group: "Prove", items: [
+      ["Security awareness training", "Short sessions and simulated phishing tests for your team."],
+      ["Policies and documentation", "Written security policies, including WISP support for financial firms."],
+      ["Regular security reviews", "Plain-English reports on what changed and what's next."],
+      ["Questionnaire help", "Support with cyber insurance and client security questionnaires."],
+    ]},
+  ],
+  process: [
+    ["Free security assessment", "A 45-minute conversation with a senior engineer about email, backups, devices, access and AI use. No obligation."],
+    ["Findings and a written plan", "A short, plain-English list of what to fix first, with a clear proposal and timeline. Nothing starts until you're comfortable."],
+    ["Onboarding", "We inventory your devices, accounts and vendors, document your network, and set up secure admin access. Healthcare clients can sign a BAA here."],
+    ["Staged rollout", "Protections go in step by step, after hours where it makes sense, so staff aren't surprised and work doesn't stop."],
+    ["Train your team", "A short, friendly session on spotting phishing and handling client data, followed by occasional test emails."],
+    ["Monitor, review, improve", "We watch, respond and report. Regular reviews keep your protections current as your firm and the threats change."],
+  ],
+  review: "manuel",
+  faqs: [
+    ["What does a cybersecurity service for a small law firm or medical practice include?", "It usually covers endpoint protection on every computer, email security, multi-factor sign-in, patching, encryption, tested backups, staff training and a plan for responding to incidents. Ayvant runs all of these for you and keeps the documentation you need for HIPAA, legal ethics rules or the FTC Safeguards Rule."],
+    ["How is managed cybersecurity different from antivirus?", "Antivirus is one tool that looks for known bad files. Managed cybersecurity is a team running several layers of protection, watching the alerts, fixing weak spots and responding when something happens. Most attacks on small firms start with email or stolen passwords, which antivirus alone doesn't stop."],
+    ["Do you help medical and dental offices with HIPAA security requirements?", "Yes. We help practices put the HIPAA Security Rule's administrative, physical and technical safeguards in place, support your risk analysis, and keep records of what's been done. We can sign a Business Associate Agreement."],
+    ["Can you help our CPA firm meet the FTC Safeguards Rule?", "Yes. We help accounting and financial firms build and maintain a written information security program, turn on multi-factor authentication, encrypt customer data, train staff and keep the records the rule expects."],
+    ["How long does onboarding take?", "It depends on how many people, devices and locations you have. After the free assessment we give you a written plan with a realistic timeline before anything starts, so you know exactly what to expect."],
+    ["Will this disrupt my staff or my clients?", "We roll protections out in stages and do disruptive work after hours where possible. Staff get a heads-up before anything changes on their computer, and a real person to call if something feels off."],
+    ["What happens if we get hacked or hit by ransomware?", "Call us. We offer 24x7 emergency support. We work to contain the problem, restore systems from tested backups, and help you document what happened for your insurer and any notification requirements."],
+    ["Do you work with firms outside California?", "Yes. We're based in Irvine, California and serve law, medical, dental and financial firms across the United States. Most monitoring and support is delivered remotely."],
+  ],
+};

@@ -1,0 +1,7 @@
+export const FAQS = [
+  ["Do you only work with businesses in Orange County?", "No. We're based in Irvine, California, and we support law firms, medical and dental practices, CPAs and financial firms across the United States. Most day-to-day support happens remotely, which is how we can answer quickly wherever you are."],
+  ["What does a managed IT provider actually do for a small firm?", "We become your IT department. That means the help desk your staff call, keeping computers and Microsoft 365 healthy, protecting email and devices from attacks, running and testing backups, and keeping the documentation you need for compliance."],
+  ["What is AI governance, and does a small practice need it?", "AI governance is a simple set of rules and controls for how your team uses AI tools. If anyone in your office has pasted text into an AI chat tool, you already need it. We help you decide what's allowed, approve safe tools, and keep client data out of the wrong places."],
+  ["Can you help with HIPAA and other compliance requirements?", "Yes. We support HIPAA safeguards for medical and dental offices, client confidentiality obligations for law firms, and the FTC Safeguards Rule for accountants and financial firms, and we keep your security records organized so they're ready when someone asks."],
+  ["What happens in the free security assessment?", "You spend about 45 minutes with a senior engineer. We look at email security, backups, devices, access and AI use, then give you a short, plain-English list of what to fix first. There's no obligation."],
+];

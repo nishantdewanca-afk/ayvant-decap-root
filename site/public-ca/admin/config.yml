@@ -1,0 +1,39 @@
+# Decap CMS for the ayvant.ca blog (posts in content/ca/blog).
+# Sign-in uses Netlify Identity + Git Gateway on the ayvant.ca Netlify site, as the original site did,
+# so it writes to whichever repo that Netlify site is linked to.
+backend:
+  name: git-gateway
+  branch: main
+logo_url: https://ayvant.ca/ayvant-ca-logo.png
+site_url: https://ayvant.ca
+display_url: https://ayvant.ca/learning-hub/
+media_folder: site/public/images/uploads
+public_folder: /images/uploads
+collections:
+  - name: blog
+    label: Learning Hub
+    label_singular: Post
+    folder: content/ca/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    sortable_fields: [date, title]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime, hint: "A future date schedules the post. It goes live on the first build that day (Pacific time)." }
+      - { label: Author, name: author, widget: string, default: Ayvant Team }
+      - { label: Excerpt, name: excerpt, widget: text, hint: "A short summary for blog listing pages (1-2 sentences)" }
+      - { label: Featured Image, name: featuredImage, widget: image, required: false }
+      - { label: Tags, name: tags, widget: list, default: [IT Support], hint: "The first tag is shown on the post's card." }
+      - { label: Featured Post, name: featured, widget: boolean, default: false, hint: "Show in the blog's Featured Articles" }
+      - { label: Read Time (minutes), name: readTime, widget: number, default: 5, value_type: int }
+      - { label: Draft, name: draft, widget: boolean, default: false, hint: "Drafts won't be published" }
+      - label: SEO
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - { label: Meta Title, name: metaTitle, widget: string, required: false, hint: "Override the default title tag" }
+          - { label: Meta Description, name: metaDescription, widget: text, required: false, hint: "Override the default meta description" }
+      - { label: Body, name: body, widget: markdown }
