@@ -28,6 +28,13 @@ if (process.env.NEXT_PUBLIC_SITE === "ca") {
     "# The blog is now the Learning Hub",
     "/blog  /learning-hub/  301",
     "/blog/*  /learning-hub/:splat  301",
+    "",
+    "# Old Wix addresses Google still has indexed (Search Console, Nov 2026)",
+    "/contact-4  /pages/contact/  301",
+    "/get-started  /pages/contact/  301",
+    "/solutions  /pages/it-support/  301",
+    "/vision  /pages/about/  301",
+    "/post/*  /learning-hub/  301",
   ];
   fs.writeFileSync(OUT_FILE, lines.join("\n") + "\n");
   console.log(`_redirects (ca): ${lines.filter((l) => l.startsWith("/")).length} rules`);

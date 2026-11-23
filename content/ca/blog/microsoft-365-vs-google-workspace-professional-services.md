@@ -8,7 +8,7 @@ tags:
   - IT Support
   - Productivity
 readTime: 7
-metaTitle: "Microsoft 365 vs Google Workspace for Law Firms & Accountants"
+metaTitle: "Microsoft 365 vs Google Workspace for Law & Accounting"
 metaDescription: "An honest comparison of Microsoft 365 and Google Workspace for professional services firms, including security, compliance, and integration considerations."
 ---
 
