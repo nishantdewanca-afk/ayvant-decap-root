@@ -1,0 +1,10 @@
+<!doctype html>
+<!-- Lets Netlify Forms detect the guide download form at deploy time. Not linked anywhere. -->
+<html><head><meta name="robots" content="noindex"></head><body>
+<form name="guide-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field" /><input name="name" /><input name="email" /><input name="guide" />
+</form>
+<form name="security-check" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field" /><input name="firm_type" /><input name="score" /><textarea name="answers"></textarea>
+</form>
+</body></html>

@@ -1,0 +1,110 @@
+// AI Governance service page content. First draft written for Ayvant to review.
+export const aiGovernance = {
+  slug: "ai-governance",
+  name: "AI Governance",
+  seo: {
+    title: "AI Governance for Law Firms, Medical Practices & CPAs | Ayvant",
+    description: "Use AI at work without exposing client or patient data. Ayvant builds AI use policies, approved tools, access controls and staff training for law, medical, dental and financial firms.",
+  },
+  hero: {
+    eyebrow: "AI governance services",
+    lines: ["Use AI at work.", "Keep client data", "<em>out</em> of it."],
+    sub: "Your team is already using AI. We help law firms, medical and dental practices, and CPA and financial firms put clear rules, safe tools and real controls around it, before it becomes a risk.",
+    facts: ["Since 1985", "Policy, tools and training", "Serving all 50 states"],
+  },
+  answer: {
+    q: "What is AI governance?",
+    a: "AI governance is the set of rules, tools and checks that decide how your firm uses artificial intelligence. For a professional firm, that means knowing which AI tools staff use, deciding what information can never go into them, approving safe business-grade tools, controlling who can access them, keeping a person in the loop for client-facing work, and documenting it all so you can show clients and regulators.",
+  },
+  about: {
+    title: "AI is already in your office. The question is who's in charge of it.",
+    body: [
+      "Somebody has already asked a chatbot to tidy up an email, summarize a long document or clean up their notes. AI is also turning up inside software you already pay for, often switched on by default.",
+      "The risk isn't AI itself. It's client and patient information going somewhere you can't get it back, answers nobody checked before they went out, and no record of who used what.",
+      "Banning it rarely works; people just use their phones. A governance program gives your team a safe yes: approved tools, simple rules and the controls to back them up. That's what we set up and look after for you.",
+    ],
+    img: "https://images.unsplash.com/photo-1648747067003-0e4660db791f?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
+    alt: "Professional reviewing printed documents beside a laptop",
+  },
+  industriesTitle: "Your obligations didn't change. The tools did.",
+  industries: [
+    {
+      id: "law",
+      name: "Law firms",
+      title: "Confidentiality applies to the prompt box too.",
+      body: "ABA Formal Opinion 512 makes clear that lawyers using generative AI still owe clients competence, confidentiality, communication and reasonable fees. In practice, that means understanding the tools, protecting what goes into them, and checking what comes out.",
+      points: ["Approved AI tools that don't train on client matters", "Rules for privileged and confidential information", "Human review before AI work reaches a client or court"],
+    },
+    {
+      id: "medical",
+      name: "Medical & dental",
+      title: "Patient information doesn't belong in a public chatbot.",
+      body: "If an AI tool can see protected health information, HIPAA applies to it, and so does the need for a Business Associate Agreement with the vendor. AI scribes, chart summaries and patient messaging all deserve a closer look before anyone switches them on.",
+      points: ["Review of AI scribes and AI features in practice software", "BAA check for every AI vendor that touches patient data", "Clear rules on what staff may enter, and where"],
+    },
+    {
+      id: "finance",
+      name: "CPAs & finance",
+      title: "Client financials need guardrails, not guesswork.",
+      body: "The FTC Safeguards Rule still covers customer information that ends up in AI tools, and FINRA Regulatory Notice 24-09 reminds member firms that existing rules apply to generative AI too. Tax returns, statements and deal documents need clear handling rules.",
+      points: ["AI use rules written into your security program", "Approved tools for drafting and analysis", "Records of who used what, and when"],
+    },
+  ],
+  benefits: [
+    ["A safe yes", "Your team gets approved tools and clear rules instead of a ban they'll work around."],
+    ["Client data stays put", "Confidential and patient information stays out of tools you don't control."],
+    ["Answers you can trust", "A person checks AI output before it reaches a client, patient, court or regulator."],
+    ["Ready for the question", "When a client, insurer or auditor asks how you use AI, you have a written answer."],
+    ["Less shadow AI", "See which AI tools are in use across the firm, including features built into your software."],
+    ["One accountable team", "AI rules backed by the same people who run your IT and security."],
+  ],
+  included: [
+    { group: "Discover", items: [
+      ["AI use inventory", "Find the AI tools, and built-in AI features, your people actually use."],
+      ["Data flow review", "Map what information goes into each tool and where it ends up."],
+      ["Vendor review", "Check data retention, training settings, storage location and BAA availability."],
+    ]},
+    { group: "Govern", items: [
+      ["One-page AI use policy", "Plain-English rules your whole team can read in five minutes."],
+      ["Approved tool list", "Business-grade tools chosen for your firm, with settings to match."],
+      ["Human review rules", "Which work needs a person to check it, and who signs off."],
+      ["Roles and ownership", "A named person responsible for AI decisions at your firm."],
+    ]},
+    { group: "Control", items: [
+      ["Sign-in and access", "Single sign-on and multi-factor sign-in for approved AI tools."],
+      ["Data protection settings", "Training and retention turned off where possible, sensitive files labeled."],
+      ["Blocking or warnings", "Unapproved AI sites blocked or flagged where practical."],
+      ["Usage logging", "Records that show who used which tool, and when."],
+    ]},
+    { group: "Prove", items: [
+      ["Staff training", "Short, practical sessions on using AI safely in your kind of work."],
+      ["Documentation", "Policy, decisions and reviews written down for clients, insurers and auditors."],
+      ["Regular reviews", "AI tools change fast. We revisit your policy and tool list on a schedule."],
+    ]},
+  ],
+  processTitle: "How we put AI governance in place.",
+  process: [
+    ["Free assessment", "45 minutes with a senior engineer, including a look at how AI is being used at your firm today. No obligation."],
+    ["Inventory and findings", "We find the AI tools in use, the data flowing into them, and the gaps. You get a plain-English summary."],
+    ["Policy and tool decisions", "Together we write a one-page AI use policy and choose approved tools that fit your work and your rules."],
+    ["Controls rollout", "We configure sign-in, data settings, blocking and logging in stages, so nobody's workflow breaks overnight."],
+    ["Train your team", "A short session on what's allowed, what isn't, and why, with examples from your kind of firm."],
+    ["Review and adapt", "New AI tools appear every month. We review usage and update your policy and approved list on a regular schedule."],
+  ],
+  review: "amy",
+  leadMagnet: { slug: "ai-use-policy-template", title: "Free one-page AI use policy template", sub: "Fill in the blanks, review it with your team, and have everyone sign. Written for law, medical, dental and financial firms." },
+  ctas: {
+    mid: ["Not sure how AI is being used at your firm?", "In 45 minutes, a senior engineer will help you see which AI tools are in play, what data is at risk, and what to put in place first."],
+    process: ["Ready to give your team a safe yes?", "Pick a time that suits you, or call and talk to a real person today."],
+  },
+  faqs: [
+    ["What is AI governance for a small professional firm?", "It's a practical set of rules and controls for how your people use AI. For a law office, medical practice or CPA firm, that usually means an inventory of AI tools in use, a one-page AI use policy, a short list of approved tools, sign-in and data controls, human review for client-facing work, staff training, and records you can show when asked."],
+    ["Should we just ban ChatGPT and other AI tools?", "Bans rarely hold. People switch to personal phones or accounts, and you lose all visibility. A better approach is a safe yes: approved business-grade tools, clear rules on what can never be entered, and controls that block or flag the risky options."],
+    ["Can lawyers use generative AI and stay within ethics rules?", "Yes, with care. ABA Formal Opinion 512 says lawyers who use generative AI must understand the tools, protect client confidences, review the output and communicate with clients where appropriate. We put the policies and technical controls in place; your firm's ethics counsel stays the final word on legal questions."],
+    ["Is it HIPAA compliant to use AI in a medical or dental practice?", "It can be. If an AI tool handles protected health information, the vendor generally needs to sign a Business Associate Agreement and the tool needs appropriate safeguards. We review AI tools and features, check BAA availability, and set rules for what staff may enter."],
+    ["Does Microsoft Copilot or other built-in AI change our risk?", "It can. Built-in assistants can usually see whatever the signed-in user can see, so messy file permissions become an AI problem. Part of our work is tightening access and data settings before those features are switched on."],
+    ["How long does it take to put AI governance in place?", "It depends on your size and how many tools are already in use. After the free assessment you get a written plan with a realistic timeline before anything starts."],
+    ["Do you write our AI use policy for us?", "Yes. We draft a plain-English AI use policy based on how your firm actually works, review it with you, and keep it updated as tools change. For legal or regulatory interpretation, we work alongside your own counsel or compliance advisor."],
+    ["Do you provide AI governance outside California?", "Yes. We're based in Irvine, California and work with law, medical, dental and financial firms across the United States, mostly remotely."],
+  ],
+};

@@ -1,84 +1,47 @@
+# ayvant.ca (Next.js static export in /site). NEXT_PUBLIC_SITE = "ca" builds the Canadian site.
 [build]
-  command = "npm install && npm run build"
-  publish = "_site"
+  base = "site"
+  command = "npm run build"
+  publish = "out"
 
 [build.environment]
-  NODE_VERSION = "18"
-  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_VERSION = "22"
+  NEXT_PUBLIC_SITE = "ca"
+  # "true": indexable, with the sitemap in robots.txt. Set to "false" to hide the whole site from search engines.
+  NEXT_PUBLIC_INDEXABLE = "true"
 
-# Redirects
-[[redirects]]
-  from = "/admin"
-  to = "/admin/index.html"
-  status = 200
+# Security headers for every page. The CSP limits framing, plugins, <base> and form targets; it does not
+# restrict scripts, so GoHighLevel forms and chat, Google Analytics and Meta keep working. HSTS leaves out
+# includeSubDomains so other *.ayvant.ca services aren't forced onto HTTPS by this site.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+    Content-Security-Policy = "frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests"
 
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
+# Next.js build files have a content hash in their name, so browsers can keep them for a year.
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-# Pretty URLs - Netlify handles this automatically for index.html files
-# No additional redirects needed for clean URLs
+[[headers]]
+  for = "/og/*"
+  [headers.values]
+    Content-Type = "image/png"
 
-# 301 Redirects: Old location pages to new SEO-optimized pages
-[[redirects]]
-  from = "/locations/vancouver/"
-  to = "/locations/it-support-vancouver/"
-  status = 301
+[[headers]]
+  for = "/learning-hub/rss.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
 
-[[redirects]]
-  from = "/locations/surrey/"
-  to = "/locations/it-support-surrey/"
-  status = 301
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
 
-[[redirects]]
-  from = "/locations/it-support-surrey/"
-  to = "/managed-it-services-surrey/"
-  status = 301
-
-[[redirects]]
-  from = "/locations/langley/"
-  to = "/locations/it-support-langley/"
-  status = 301
-
-[[redirects]]
-  from = "/locations/burnaby/"
-  to = "/locations/it-support-burnaby/"
-  status = 301
-
-[[redirects]]
-  from = "/locations/richmond/"
-  to = "/locations/it-support-richmond/"
-  status = 301
-
-[[redirects]]
-  from = "/locations/coquitlam/"
-  to = "/locations/it-support-coquitlam/"
-  status = 301
-
-[[redirects]]
-  from = "/locations/port-moody/"
-  to = "/locations/it-support-port-moody/"
-  status = 301
-
-[[redirects]]
-  from = "/locations/delta/"
-  to = "/locations/it-support-delta/"
-  status = 301
-
-[[redirects]]
-  from = "/locations/abbotsford/"
-  to = "/locations/it-support-abbotsford/"
-  status = 301
-
-[[redirects]]
-  from = "/locations/chilliwack/"
-  to = "/locations/it-support-chilliwack/"
-  status = 301
-
-# 404 handling
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
-
+# Redirects are written by site/scripts/redirects.mjs into _redirects at build time.

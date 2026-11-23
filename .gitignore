@@ -1,23 +1,7 @@
-# Dependencies
 node_modules/
-
-# Build output
-_site/
-
-# OS files
+.next/
+out/
+site/public/_redirects
 .DS_Store
-Thumbs.db
-
-# Editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Logs
-npm-debug.log
-yarn-error.log
-
-# Environment files (keep example, ignore actual)
 .env
 .env.local
