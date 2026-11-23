@@ -15,10 +15,8 @@ featured: false
 readTime: 5
 draft: false
 seo:
-  metaTitle: Your Staff Are Using AI with Patient Data. Is It HIPAA Compliant?
-  metaDescription: Consumer AI platforms like ChatGPT and Claude have no BAA and
-    no HIPAA safeguards. Here is what healthcare organizations need to do to
-    stay compliant while using AI.
+  metaTitle: "Staff Using AI With Patient Data? What Clinics Must Know"
+  metaDescription: "Healthcare staff are pasting patient data into consumer AI tools. Why a signed policy isn't enough, and what safe, compliant AI use looks like."
 ---
 *An AI policy in your HR handbook is insufficient. Healthcare organizations require comprehensive measures to ensure ongoing compliance.*
 

@@ -3,8 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ metaTitle or title }} | {{ site.name }}</title>
-  <meta name="description" content="{{ metaDescription or description or site.description }}">
+  {#- SEO title/description. Decap CMS blog posts store these under `seo`, pages store them top-level. -#}
+  {%- set seoTitle = (seo.metaTitle if (seo and seo.metaTitle) else (metaTitle or title)) | trim -%}
+  {%- set seoDesc = (seo.metaDescription if (seo and seo.metaDescription) else (metaDescription or excerpt or description or site.description)) | striptags | trim -%}
+  {#- Add the brand only where it fits in ~60 characters, so Google doesn't cut off the keywords. -#}
+  {%- if "Ayvant" in seoTitle -%}
+    {%- set fullTitle = seoTitle -%}
+  {%- elif (seoTitle | length) + (site.name | length) + 3 <= 60 -%}
+    {%- set fullTitle = seoTitle + " | " + site.name -%}
+  {%- elif (seoTitle | length) + 9 <= 60 -%}
+    {%- set fullTitle = seoTitle + " | Ayvant" -%}
+  {%- else -%}
+    {%- set fullTitle = seoTitle -%}
+  {%- endif %}
+  <title>{{ fullTitle }}</title>
+  <meta name="description" content="{{ seoDesc }}">
   
   <!-- Preconnect to required origins for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +37,11 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="{{ metaTitle or title }} | {{ site.name }}">
-  <meta property="og:description" content="{{ metaDescription or description or site.description }}">
-  <meta property="og:type" content="{{ 'article' if layout == 'post' else 'website' }}">
+  <meta property="og:title" content="{{ fullTitle }}">
+  <meta property="og:description" content="{{ seoDesc }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:type" content="{{ 'article' if layout == 'post.njk' else 'website' }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   {% if featuredImage %}
   <meta property="og:image" content="{{ site.url }}{{ featuredImage }}">
@@ -34,8 +49,8 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ metaTitle or title }} | {{ site.name }}">
-  <meta name="twitter:description" content="{{ metaDescription or description or site.description }}">
+  <meta name="twitter:title" content="{{ fullTitle }}">
+  <meta name="twitter:description" content="{{ seoDesc }}">
   
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -74,7 +89,7 @@
     "sameAs": [
       "{{ site.social.linkedin }}",
       "{{ site.social.facebook }}",
-      "{{ site.social.twitter }}"
+      "{{ site.social.x }}"
     ],
     "areaServed": [
       {"@type": "City", "name": "Vancouver", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}},
@@ -139,12 +154,23 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "{{ site.name }}",
-    "url": "{{ site.url }}",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "{{ site.url }}/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "url": "{{ site.url }}"
+  }
+  </script>
+  {% endif %}
+  {% if layout == "post.njk" %}
+  <!-- Article Schema for Blog Posts -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ title | dump | safe }},
+    "description": {{ seoDesc | dump | safe }},
+    "datePublished": "{{ date | isoDate }}",
+    "author": {"@type": "Organization", "name": {{ (author or site.name) | dump | safe }}},
+    "publisher": {"@id": "{{ site.url }}/#organization"},
+    "mainEntityOfPage": "{{ site.url }}{{ page.url }}"{% if featuredImage %},
+    "image": "{{ site.url }}{{ featuredImage }}"{% endif %}
   }
   </script>
   {% endif %}

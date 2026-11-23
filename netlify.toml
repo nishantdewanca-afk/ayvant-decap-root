@@ -20,61 +20,218 @@
 # Pretty URLs - Netlify handles this automatically for index.html files
 # No additional redirects needed for clean URLs
 
-# 301 Redirects: Old location pages to new SEO-optimized pages
+# 301 Redirects: old location pages -> current pages (forced, single hop)
 [[redirects]]
   from = "/locations/vancouver/"
   to = "/locations/it-support-vancouver/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/vancouver"
+  to = "/locations/it-support-vancouver/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/locations/surrey/"
-  to = "/locations/it-support-surrey/"
-  status = 301
-
-[[redirects]]
-  from = "/locations/it-support-surrey/"
   to = "/managed-it-services-surrey/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/surrey"
+  to = "/managed-it-services-surrey/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/locations/langley/"
   to = "/locations/it-support-langley/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/langley"
+  to = "/locations/it-support-langley/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/locations/burnaby/"
   to = "/locations/it-support-burnaby/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/burnaby"
+  to = "/locations/it-support-burnaby/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/locations/richmond/"
   to = "/locations/it-support-richmond/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/richmond"
+  to = "/locations/it-support-richmond/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/locations/coquitlam/"
   to = "/locations/it-support-coquitlam/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/coquitlam"
+  to = "/locations/it-support-coquitlam/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/locations/port-moody/"
   to = "/locations/it-support-port-moody/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/port-moody"
+  to = "/locations/it-support-port-moody/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/locations/delta/"
   to = "/locations/it-support-delta/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/delta"
+  to = "/locations/it-support-delta/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/locations/abbotsford/"
   to = "/locations/it-support-abbotsford/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/abbotsford"
+  to = "/locations/it-support-abbotsford/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/locations/chilliwack/"
   to = "/locations/it-support-chilliwack/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/chilliwack"
+  to = "/locations/it-support-chilliwack/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/it-support-surrey/"
+  to = "/managed-it-services-surrey/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/it-support-surrey"
+  to = "/managed-it-services-surrey/"
+  status = 301
+  force = true
+
+# 301 Redirects: old Learning Hub URLs -> blog
+[[redirects]]
+  from = "/learning-hub/"
+  to = "/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/learning-hub"
+  to = "/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/learning-hub/*"
+  to = "/blog/:splat"
+  status = 301
+  force = true
+
+# 301 Redirects: old Wix URLs still indexed by Google
+[[redirects]]
+  from = "/contact-4"
+  to = "/pages/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/pages/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/get-started"
+  to = "/pages/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solutions"
+  to = "/pages/it-support/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services"
+  to = "/pages/it-support/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vision"
+  to = "/pages/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about-us"
+  to = "/pages/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog-1"
+  to = "/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/post/*"
+  to = "/blog/"
+  status = 301
+  force = true
 
 # 404 handling
 [[redirects]]

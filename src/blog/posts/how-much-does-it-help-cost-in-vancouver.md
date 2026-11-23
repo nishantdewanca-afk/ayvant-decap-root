@@ -13,11 +13,8 @@ featured: false
 readTime: 5
 draft: false
 seo:
-  metaDescription: This post gives you real numbers. We'll talk about the average
-    cost of IT support for small businesses in Greater Vancouver, what each
-    price level includes, and what factors can make the price go up or down. At
-    the end, you'll know exactly what to expect before you call anyone.
-  metaTitle: How Much Does IT Help Cost in Vancouver?
+  metaTitle: "How Much Does IT Support Cost in Vancouver? (2026)"
+  metaDescription: "What small businesses in Greater Vancouver pay for IT support per user per month, what each price level includes, and what drives the cost up or down."
 ---
 If you've been looking for IT support prices in Vancouver, you may have noticed that most companies don't put their prices online. That's annoying, and it makes it hard to plan your money.
 

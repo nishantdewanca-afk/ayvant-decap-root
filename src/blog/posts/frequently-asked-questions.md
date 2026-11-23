@@ -16,7 +16,7 @@ seo:
     businesses — pricing, security, PIPEDA compliance, NDAs, and more. Free
     consultation available.
 ---
-# Questions That Are Often Asked
+## Questions That Are Often Asked
 
 IT Support and Managed Services in Greater Vancouver, BC
 
